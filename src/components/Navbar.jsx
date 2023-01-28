@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       <nav className='w-full text-white nav-font'>
-        <div className='justify-between px-4 mx-auto lg:max-w-7xl items-center md:flex md:px-8'>
+        <div className='justify-between px-4 mx-auto lg:max-w-7xl items-center md:flex md:px-8 mx-6'>
           <div className='flex items-center justify-between py-3 md:py-5 md:block'>
             <a className='text-[22.5px]' href='/'>
               &#60;&#47;&#62; PICTUSWEB development

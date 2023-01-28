@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   return (
     <BrowserRouter>
-      <div className='hero-gradient'>
+      <div className='hero-gradient2'>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
