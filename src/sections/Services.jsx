@@ -7,8 +7,8 @@ const Services = () => {
       </h1>
       <div className='border border-white border-3 rounded-[15px] mt-[120px] max-w-[75%] mx-auto'>
         <div className='flex lg:flex-row flex-col items-center py-16'>
-          <div className='w-[50%] ml-[10%]'>
-            <img className='w-[60%]' src='/design.png' alt='services' />
+          <div className='w-[50%] ml-[5%]'>
+            <img className='w-[90%]' src='/design.png' alt='services' />
           </div>
 
           <div className='w-[50%] mr-[5%] flex flex-col'>
@@ -45,7 +45,7 @@ const Services = () => {
           <div className='w-[50%] ml-[5%] flex flex-col'>
             <div className='flex flex-row items-center gap-3'>
               <img className='w-[5%]' src='/service-check.png' alt='service' />
-              <h3 className='text-[3rem] mt-[18px]'>Non-stop prevádzka webu</h3>
+              <h3 className='text-[3rem] mt-[18px]'>Non-stop prevádzka</h3>
             </div>
             <div>
               <p className='text-[2rem]'>
@@ -70,7 +70,7 @@ const Services = () => {
               </p> */}
             </div>
           </div>
-          <div className='w-[50%] ml-[12.5%]'>
+          <div className='w-[50%] ml-[14.5%]'>
             <img className='w-[75%]' src='/server.png' alt='server' />
           </div>
         </div>
