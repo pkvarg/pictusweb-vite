@@ -35,11 +35,20 @@ input#flexCheckDefault {
 }
 
 .hero-gradient {
-  background: rgb(38, 17, 79);
-  background: linear-gradient(
-    76deg,
-    rgba(38, 17, 79, 1) 30%,
-    rgba(9, 43, 109, 1) 100%
+  background-image: linear-gradient(
+    to bottom,
+    #0f0109,
+    #1b0817,
+    #210e24,
+    #241333,
+    #221a44,
+    #272254,
+    #2b2a64,
+    #2e3375,
+    #463d87,
+    #5e4898,
+    #7752a9,
+    #915cb9
   );
 }
 
