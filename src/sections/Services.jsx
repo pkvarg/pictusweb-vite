@@ -1,11 +1,11 @@
 import React from 'react'
 const Services = () => {
   return (
-    <div className='text-white py-[120px]'>
-      <h1 className='text-[4.5rem] text-center'>
-        Weby, ktoré Vám prinesú úspech
-      </h1>
+    <div className='text-white lg:py-[120px]'>
       <div className='lg:border border-white border-3 rounded-[15px] mt-[120px] lg:max-w-[75%] mx-auto'>
+        <h1 className='lg:text-[4.5rem] text-[2.5rem] text-center mt-20'>
+          Weby, ktoré Vám prinesú úspech
+        </h1>
         <div className='flex lg:flex-row flex-col items-center py-16'>
           <div className='lg:w-[50%] ml-[5%]'>
             <img className='lg:w-[90%]' src='/design.png' alt='services' />
