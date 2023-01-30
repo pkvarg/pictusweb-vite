@@ -83,7 +83,7 @@ const Navbar = () => {
                     to='projects'
                     spy={true}
                     smooth={true}
-                    offset={70}
+                    offset={20}
                     duration={500}
                     className='text-[2.5rem] hover:text-dark-red'
                   >
