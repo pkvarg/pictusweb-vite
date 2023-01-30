@@ -83,7 +83,7 @@ const Navbar = () => {
                     to='projects'
                     spy={true}
                     smooth={true}
-                    offset={125}
+                    offset={70}
                     duration={500}
                     className='text-[2.5rem] hover:text-dark-red'
                   >
@@ -104,16 +104,12 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to='about'
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
+                  <a
+                    href='/about'
                     className='text-[2.5rem] hover:text-dark-red'
                   >
                     O firme
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
