@@ -1,7 +1,7 @@
 import React from 'react'
 const Services = () => {
   return (
-    <div className='text-white lg:py-[120px]'>
+    <div className='text-white lg:pb-[120px]'>
       <div className='lg:border border-white border-3 rounded-[15px] mt-[120px] lg:max-w-[75%] mx-auto'>
         <h1 className='lg:text-[4.5rem] text-[2.5rem] text-center mt-20'>
           Weby, ktoré Vám prinesú úspech

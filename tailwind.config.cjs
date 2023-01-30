@@ -1,10 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+/* @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     colors: {
       white: '#e6e6e6',
-      'skin-color': '#f7e7d0',
+      silver: '#eefefe',
+
       'nav-blue': '#5b909d',
       'nav-black': '#010101',
       'btn-blue': '#a0dffe',

@@ -7,8 +7,8 @@ const Projects = () => {
     navigate('/projects')
   }
   return (
-    <div className='text-white py-40' id='projects'>
-      <h1 className='text-center text-[56px] mb-40'>Projekty</h1>
+    <div className='text-white pt-10' id='projects'>
+      <h1 className='text-center text-[56px] mb-[120px]'>Projekty</h1>
       <div className='flex lg:flex-row flex-col justify-center items-center lg:gap-2 gap-8 w-[90%] mx-auto'>
         <div className='flex flex-col gap-3'>
           <img
