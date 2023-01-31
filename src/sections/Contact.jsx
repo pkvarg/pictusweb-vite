@@ -62,7 +62,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className='py-40'>
+    <div className='pt-40 pb-10'>
       <h1
         id='contact'
         className='text-[60px] text-white text-center lg:pt-0 pt-[55px]'
@@ -172,7 +172,7 @@ const ContactForm = () => {
                 onChange={(e) => setPasswordGroupTwo(e.target.value)}
               />
               <button
-                className='text-[35px] bg-violet lg:mt-3 mt-10 pt-3 rounded-xl border border-white hover:text-violet hover:bg-white'
+                className='text-[35px] bg-violet lg:mt-20 mt-10 pt-3 rounded-xl border border-white hover:text-violet hover:bg-white'
                 type='submit'
                 value='Send'
               >
