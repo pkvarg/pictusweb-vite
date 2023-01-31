@@ -1,12 +1,26 @@
 import React from 'react'
 import { Footer } from '../components'
+import { useNavigate } from 'react-router-dom'
 
 const Gdpr = () => {
+  const navigate = useNavigate()
+  const backButton = () => {
+    navigate(-1)
+  }
   return (
     <>
       <div className='second-gradient text-white text-[32px]'>
-        <div className='lg:mx-20 mx-2 lg:py-20 py-6 lg:text-justify flex flex-col gap-4'>
-          <h2>ZÁSADY SPRACOVÁVANIA OSOBNÝCH ÚDAJOV</h2>
+        <div className='lg:mx-20 mx-2 lg:py-20 py-6 lg:text-justify flex flex-col gap-4 '>
+          <div className='flex flex-row justify-between relative'>
+            <h2>ZÁSADY SPRACOVÁVANIA OSOBNÝCH ÚDAJOV</h2>
+            <button
+              className='
+              lg:text-[35px] text-[25px] bg-violet  pt-3 px-2 rounded-xl border border-white hover:text-violet hover:bg-white absolute lg:-top-6 -top-4 right-0'
+              onClick={() => backButton()}
+            >
+              <span>Naspäť</span>
+            </button>
+          </div>
           <p>
             Ochranu osobných údajov berieme vážne. Je pre nás dôležité, aby vaše
             osobné údaje boli v bezpečí. Všetky osobné údaje, ktoré sú získavané

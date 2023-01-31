@@ -172,7 +172,7 @@ const ContactForm = () => {
                 onChange={(e) => setPasswordGroupTwo(e.target.value)}
               />
               <button
-                className='text-[35px] bg-violet lg:mt-3 mt-10 pt-3 rounded-xl hover:bg-skin-color border border-white hover:text-violet hover:bg-white'
+                className='text-[35px] bg-violet lg:mt-3 mt-10 pt-3 rounded-xl border border-white hover:text-violet hover:bg-white'
                 type='submit'
                 value='Send'
               >
