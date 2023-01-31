@@ -6,10 +6,10 @@ module.exports = {
     colors: {
       white: '#e6e6e6',
       silver: '#eefefe',
-
+      violet: '#3B0A60',
       'nav-blue': '#5b909d',
       'nav-black': '#010101',
-      'btn-blue': '#a0dffe',
+
       'message-red': '	#EE4B2B',
       'message-green': '#039f2f',
       gallery2: '#ef9e9d',

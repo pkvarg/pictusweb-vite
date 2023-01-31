@@ -37,7 +37,7 @@ const Projects = () => {
       </div>
       <div className='flex justify-center'>
         <button
-          className='text-[35px] mt-20 px-6 pt-4 pb-1.5 bg-[#3B0A60] rounded-[25px] border border-white  hover:bg-blue-700 hover:bg-white hover:text-[#3B0A60] '
+          className='text-[35px] mt-20 px-6 pt-4 pb-1.5 bg-violet rounded-[25px] border border-white  hover:bg-blue-700 hover:bg-white hover:text-[#3B0A60] '
           onClick={() => toProjectsHandler()}
         >
           Detaily

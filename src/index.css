@@ -74,6 +74,9 @@ input#flexCheckDefault {
   #root {
     overflow-x: hidden;
   }
+  input#flexCheckDefault {
+    width: 100px;
+  }
 }
 
 .hero-gradient2 {
@@ -84,6 +87,20 @@ input#flexCheckDefault {
     rgba(34, 47, 99, 1) 99%
   );
   z-index: 999;
+}
+
+.form-control {
+  padding-top: 10px;
+}
+
+input,
+textarea {
+  background-color: #2b2a64 !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #2b2a64 !important;
 }
 
 .svg-z {

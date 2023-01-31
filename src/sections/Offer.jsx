@@ -11,7 +11,7 @@ const Offer = () => {
       <h1 className='text-[56px] text-center mb-16 lg:mt-0 mt-[120px]'>
         Ponuka
       </h1>
-      <div className='flex lg:flex-row flex-col justify-center items-center gap-4 lg:h-[37.5rem]'>
+      <div className='flex lg:flex-row flex-col justify-center items-center gap-4 lg:h-[39.5rem] md:h-[50rem]'>
         <div className='lg:border border-white lg:w-[25%] lg:h-[100%]'>
           <h1 className='text-center text-[35px] mt-10'>Webstránka</h1>
           <div className='w-[15rem] h-2  bg-[#4d4fec] ml-auto mr-auto'></div>
@@ -88,7 +88,7 @@ const Offer = () => {
       </div>
       <div className='flex justify-center'>
         <button
-          className='text-[35px] mt-20 px-6 pt-4 pb-1.5 bg-[#3B0A60] rounded-[25px] border border-white  hover:bg-blue-700 hover:bg-white hover:text-[#3B0A60] ml-auto mr-auto'
+          className='text-[35px] mt-20 px-6 pt-4 pb-1.5 bg-violet rounded-[25px] border border-white  hover:bg-blue-700 hover:bg-white hover:text-[#3B0A60] ml-auto mr-auto'
           onClick={() => toProjectsHandler()}
         >
           Detaily

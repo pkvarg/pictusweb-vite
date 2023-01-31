@@ -4,7 +4,7 @@ import Hero from '../sections/Hero'
 import Services from '../sections/Services'
 import Projects from '../sections/Projects'
 import Offer from '../sections/Offer'
-
+import Contact from '../sections/Contact'
 const Home = () => {
   return (
     <>
@@ -17,6 +17,7 @@ const Home = () => {
       <div className='second-gradient'>
         <Projects />
         <Offer />
+        <Contact />
       </div>
     </>
   )

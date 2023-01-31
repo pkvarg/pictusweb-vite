@@ -108,7 +108,7 @@ const Navbar = () => {
                     href='/about'
                     className='text-[2.5rem] hover:text-dark-red'
                   >
-                    O firme
+                    Info
                   </a>
                 </li>
               </ul>
