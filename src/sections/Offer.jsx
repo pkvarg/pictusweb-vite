@@ -39,7 +39,7 @@ const Offer = () => {
           <h1 className='text-center text-[35px] mt-10'>Eshop</h1>
           <div className='w-[9rem] h-2 bg-[#ba98d2] ml-auto mr-auto'></div>
           <h1 className='text-[70px] text-center my-10'>
-            <span className='text-[50px]'>od</span> 1200 €
+            <span className='text-[50px]'>od</span> 1500 €
             <div className='flex flex-col'>
               <div className='flex flex-row  gap-2 justify-center'>
                 <p className='text-[35px] mt-[1.25%]'>
