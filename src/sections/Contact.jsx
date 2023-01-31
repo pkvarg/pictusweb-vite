@@ -79,7 +79,7 @@ const ContactForm = () => {
             <form
               ref={form}
               onSubmit={sendEmail}
-              className='flex flex-col gap-[2.5px] lg:text-[35px] text-[55px]'
+              className='flex flex-col gap-[2.5px] lg:text-[35px] text-[35px]'
             >
               <div className='flex lg:flex-row flex-col gap-[25px]'>
                 <div className='flex flex-col justify-center '>
@@ -172,7 +172,7 @@ const ContactForm = () => {
                 onChange={(e) => setPasswordGroupTwo(e.target.value)}
               />
               <button
-                className='bg-violet lg:mt-3 mt-10 pt-3 rounded-xl hover:bg-skin-color border border-white hover:text-violet hover:bg-white'
+                className='text-[35px] bg-violet lg:mt-3 mt-10 pt-3 rounded-xl hover:bg-skin-color border border-white hover:text-violet hover:bg-white'
                 type='submit'
                 value='Send'
               >
