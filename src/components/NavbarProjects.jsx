@@ -54,31 +54,27 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className='sm:w-[65%] lg:w-[50%]'>
             <div
               className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
                 navbar ? 'block' : 'hidden'
               }`}
             >
               <ul className='items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'>
-                <li>
-                  <Link
-                    to='offer'
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                    className='text-[2.5rem] hover:text-dark-red'
-                  >
-                    Ponuka
-                  </Link>
-                </li>
-                <li>
+                <li className='hidden lg:flex'>
                   <a
-                    href='/projects'
-                    className='text-[2.5rem] hover:text-dark-red'
+                    href='/'
+                    className='text-[2rem] lg:text-[2.5rem] hover:text-dark-red'
                   >
-                    Projekty
+                    Domov
+                  </a>
+                </li>
+                <li className=''>
+                  <a
+                    href='/about'
+                    className='text-[2rem] lg:text-[2.5rem] hover:text-dark-red'
+                  >
+                    O firme
                   </a>
                 </li>
 
@@ -89,19 +85,11 @@ const Navbar = () => {
                     smooth={true}
                     offset={0}
                     duration={500}
-                    className='text-[2.5rem] hover:text-dark-red'
+                    className='text-[2rem] lg:text-[2.5rem] hover:text-dark-red'
                   >
                     Kontakt
                   </Link>
                 </li>
-                {/* <li>
-                  <a
-                    href='/about'
-                    className='text-[2.5rem] hover:text-dark-red'
-                  >
-                    Info
-                  </a>
-                </li> */}
               </ul>
             </div>
           </div>

@@ -62,15 +62,15 @@ const ContactForm = () => {
   }
 
   return (
-    <div className='pt-40 pb-10'>
+    <div className='pt-40 pb-10 '>
       <h1
         id='contact'
-        className='text-[60px] text-white text-center lg:pt-0 pt-[55px]'
+        className='text-[35px] lg:text-[60px] text-white text-center lg:pt-0 pt-[55px]'
       >
         Napíšte nám správu
       </h1>
-      <div className='flex lg:flex-row flex-col lg:justify-center text-white lg:py-[100px] lg:mx-0 mx-3'>
-        <div className=' lg:pt-0 lg:pt-[0px] pt-[50px]'>
+      <div className='mx-[7.75%] lg:mx-0 flex lg:flex-row flex-col lg:justify-center text-white lg:py-[100px] '>
+        <div className='pt-[50px] lg:pt-0 lg:pt-[0px] '>
           {messageSuccess && (
             <Message variant='success'>{messageSuccess}</Message>
           )}
@@ -79,7 +79,7 @@ const ContactForm = () => {
             <form
               ref={form}
               onSubmit={sendEmail}
-              className='flex flex-col gap-[2.5px] lg:text-[35px] text-[35px]'
+              className='flex flex-col gap-[2.5px] text-[35px]'
             >
               <div className='flex lg:flex-row flex-col gap-[25px]'>
                 <div className='flex flex-col justify-center '>

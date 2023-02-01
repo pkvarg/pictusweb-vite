@@ -7,11 +7,11 @@ const Offer = () => {
     navigate('/projects')
   }
   return (
-    <div className='text-white lg:mt-40 ' id='offer'>
-      <h1 className='text-[56px] text-center mb-16 lg:mt-0 mt-[120px]'>
+    <div className='text-white lg:mt-40' id='offer'>
+      <h1 className='text-[56px] text-center mb-16 mt-[120px] lg:mt-0 '>
         Ponuka
       </h1>
-      <div className='flex lg:flex-row flex-col justify-center items-center gap-4 lg:h-[39.5rem] md:h-[50rem]'>
+      <div className='flex lg:flex-row flex-col justify-center items-center gap-4 sm:h-[50rem] md:h-[90rem] lg:h-[39.5rem]'>
         <div className='lg:border border-white lg:w-[25%] lg:h-[100%]'>
           <h1 className='text-center text-[35px] mt-10'>Webstránka</h1>
           <div className='w-[15rem] h-2  bg-[#4d4fec] ml-auto mr-auto'></div>
