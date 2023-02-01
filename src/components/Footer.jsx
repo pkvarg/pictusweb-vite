@@ -25,6 +25,12 @@ const Footer = () => (
                   Pictusweb s.r.o.
                 </h4>
               </div>
+              <a
+                className='font-extrabold text-[24px] text-white'
+                href='/about'
+              >
+                O firme
+              </a>
 
               <a className='font-extrabold text-[24px] text-white' href='/gdpr'>
                 GDPR

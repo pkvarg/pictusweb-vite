@@ -1,10 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import Footer from '../components/Footer'
+
 // import Navbar from '../components/Navbar'
 
 const OurProjects = () => {
+  const navigate = useNavigate()
+  const toProjectsHandler = () => {
+    navigate('/projects')
+  }
   return (
     <>
-      <div className='hero-gradient text-white flex flex-col justify-center items-center gap-20'>
+      <div className='hero-gradient text-white flex flex-col justify-center items-center gap-40'>
         {/* <Navbar /> */}
         <h1 className='text-[56px] pt-20'>Realizované projekty</h1>
         <img
@@ -16,7 +23,7 @@ const OurProjects = () => {
           V našich projektoch používame moderné technológie založené na jazyku
           Javascript.
         </h1>
-        <div className='flex lg:flex-row flex-col items-center justify-center gap-20'>
+        <div className='flex lg:flex-row flex-col items-center justify-center gap-40'>
           <div className='flex flex-col justify-center items-center'>
             <h2 className='text-[30px]'>Prezentačný web</h2>
             <h3 className='text-[25px]'>v základnej cene</h3>
@@ -27,8 +34,8 @@ const OurProjects = () => {
             alt='ioana-illustrations.eu'
           />
         </div>
-        <div className='flex flex-row justify-center items-center gap-10 pb-40'>
-          <h1 className='text-[30px] mt-2'>Technológie</h1>
+        <div className='flex flex-row justify-center items-center gap-10'>
+          <h1 className='text-[30px] mt-2'>Technológie:</h1>
 
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -94,19 +101,19 @@ const OurProjects = () => {
           <img className='w-[4%]' src='/tailwind.png' alt='tailwind-css' />
           <p className='text-[30px] mt-2'>Tailwind css</p>
         </div>
-        <div className='flex lg:flex-row flex-col items-center justify-center gap-20'>
+        <div className='flex lg:flex-row flex-col items-center justify-center gap-40'>
+          <img
+            className='w-[30%]'
+            src='/dvl-page.png'
+            alt='kvalitnamontaz.sk'
+          />
           <div className='flex flex-col justify-center items-center'>
             <h2 className='text-[30px]'>Prezentačný web</h2>
             <h3 className='text-[25px]'>v základnej cene</h3>
           </div>
-          <img
-            className='w-[30%]'
-            src='/ioana-page.png'
-            alt='ioana-illustrations.eu'
-          />
         </div>
-        <div className='flex flex-row justify-center items-center gap-10 pb-40'>
-          <h1 className='text-[30px] mt-2'>Technológie</h1>
+        <div className='flex flex-row justify-center items-center gap-10'>
+          <h1 className='text-[30px] mt-2'>Technológie:</h1>
 
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -169,67 +176,29 @@ const OurProjects = () => {
             ></path>
           </svg>
           <p className='text-[30px] mt-2'>React</p>
-          <img className='w-[4%]' src='/tailwind.png' alt='tailwind-css' />
-          <p className='text-[30px] mt-2'>Tailwind css</p>
+          <img className='w-[4%]' src='/bootstrap.png' alt='tailwind-css' />
+          <p className='text-[30px] mt-2'>Bootstrap 5</p>
         </div>
-        <div className='flex lg:flex-row flex-col items-center justify-center gap-20'>
+        <div className='flex lg:flex-row flex-col items-center justify-center gap-40'>
           <div className='flex flex-col justify-center items-center'>
-            <h2 className='text-[30px]'>Prezentačný web</h2>
+            <h2 className='text-[30px]'>Moderný eshop</h2>
             <h3 className='text-[25px]'>v základnej cene</h3>
           </div>
-          <img
-            className='w-[30%]'
-            src='/ioana-page.png'
-            alt='ioana-illustrations.eu'
-          />
+          <img className='w-[30%]' src='/prud-page.png' alt='prud.sk' />
         </div>
-        <div className='flex flex-row justify-center items-center gap-10 pb-40'>
-          <h1 className='text-[30px] mt-2'>Technológie</h1>
+        <h3 className='text-[25px] text-center mx-40'>
+          Admin menu na mieru pre pridávanie produktov, bannerov, mp3, videí,
+          spravovanie kategórií užívateľov, objednávok. Automatické generovanie
+          faktúr odosielaných na email. Platba PayPal, kartou či na dobierku.
+          Prihlásenie cez mail alebo Google.
+        </h3>
+        <div className='flex flex-row justify-center items-center gap-10 pb-0'>
+          <h1 className='text-[30px] mt-2'>Technológie:</h1>
 
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            xmlns:xlink='http://www.w3.org/1999/xlink'
-            aria-hidden='true'
-            role='img'
-            class='iconify iconify--logos'
-            width='31.88'
-            height='32'
-            preserveAspectRatio='xMidYMid meet'
-            viewBox='0 0 256 257'
-          >
-            <defs>
-              <linearGradient
-                id='IconifyId1813088fe1fbc01fb466'
-                x1='-.828%'
-                x2='57.636%'
-                y1='7.652%'
-                y2='78.411%'
-              >
-                <stop offset='0%' stop-color='#41D1FF'></stop>
-                <stop offset='100%' stop-color='#BD34FE'></stop>
-              </linearGradient>
-              <linearGradient
-                id='IconifyId1813088fe1fbc01fb467'
-                x1='43.376%'
-                x2='50.316%'
-                y1='2.242%'
-                y2='89.03%'
-              >
-                <stop offset='0%' stop-color='#FFEA83'></stop>
-                <stop offset='8.333%' stop-color='#FFDD35'></stop>
-                <stop offset='100%' stop-color='#FFA800'></stop>
-              </linearGradient>
-            </defs>
-            <path
-              fill='url(#IconifyId1813088fe1fbc01fb466)'
-              d='M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z'
-            ></path>
-            <path
-              fill='url(#IconifyId1813088fe1fbc01fb467)'
-              d='M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z'
-            ></path>
-          </svg>
-          <p className='text-[30px] mt-2'> Vite </p>
+          <img className='w-[3.5%]' src='/mongo.png' alt='mongo-db' />
+          <p className='text-[30px] mt-2'> Mongo DB</p>
+          <img className='w-[3.5%]' src='/express.png' alt='mongo-db' />
+          <p className='text-[30px] mt-2'> Express</p>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             xmlns:xlink='http://www.w3.org/1999/xlink'
@@ -247,9 +216,19 @@ const OurProjects = () => {
             ></path>
           </svg>
           <p className='text-[30px] mt-2'>React</p>
-          <img className='w-[4%]' src='/tailwind.png' alt='tailwind-css' />
-          <p className='text-[30px] mt-2'>Tailwind css</p>
+          <img className='w-[3.5%]' src='/node.png' alt='tailwind-css' />
+          <p className='text-[30px] mt-2'>Node JS</p>
         </div>
+        <button
+          className='text-[35px]  mb-40 px-6 pt-4 pb-1.5 bg-violet rounded-[25px] border border-white  hover:bg-blue-700 hover:bg-white hover:text-[#3B0A60] ml-auto mr-auto'
+          onClick={() => toContactHandler()}
+        >
+          Kontakt
+        </button>
+      </div>
+      <div className='second-gradient'>
+        <img className='w-[100%]' src='development.png' alt='web-development' />
+        <Footer />
       </div>
     </>
   )

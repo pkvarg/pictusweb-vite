@@ -79,16 +79,12 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to='projects'
-                    spy={true}
-                    smooth={true}
-                    offset={20}
-                    duration={500}
+                  <a
+                    href='/projects'
                     className='text-[2.5rem] hover:text-dark-red'
                   >
                     Projekty
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
@@ -103,14 +99,14 @@ const Navbar = () => {
                     Kontakt
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href='/about'
                     className='text-[2.5rem] hover:text-dark-red'
                   >
                     Info
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
