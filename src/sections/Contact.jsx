@@ -44,12 +44,18 @@ const ContactForm = () => {
         .then(
           (result) => {
             console.log(result.text)
+            setMessageSuccess('Vaša správa bola úspešne odoslaná!')
+
             console.log('message sent')
           },
           (error) => {
             console.log(error.text)
+            setMessageSuccess(
+              'Chyba! Napíšte nám na info@pictusweb.sk, prosím.'
+            )
           }
         )
+
       setName('')
       setSubject('')
       setEmail('')
@@ -57,7 +63,7 @@ const ContactForm = () => {
       setMailMessage('')
       const element = document.getElementById('contact')
       element.scrollIntoView({ behavior: 'smooth' })
-      setMessageSuccess('Vaša správa bola úspešne odoslaná!')
+      // setMessageSuccess('Vaša správa bola úspešne odoslaná!')
     }
   }
 
