@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
-import Navbar from './components/Navbar'
 import { Home, OurProjects, About, Gdpr, TradeRules } from './pages'
+import { ScrollToTop } from './components'
 import './App.css'
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <div className='hero-gradient'>
-      </div>
-        <Navbar /> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/projects' element={<OurProjects />} />
@@ -17,6 +14,7 @@ function App() {
         <Route path='/gdpr' element={<Gdpr />} />
         <Route path='/trade-rules' element={<TradeRules />} />
       </Routes>
+      <ScrollToTop />
     </BrowserRouter>
   )
 }

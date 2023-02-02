@@ -15,7 +15,7 @@ const TradeRrules = () => {
             <h2>Všeobecné obchodné podmienky</h2>
             <button
               className='
-              lg:text-[35px] text-[25px] bg-violet  pt-3 px-2 rounded-xl border border-white hover:text-violet hover:bg-white absolute lg:-top-6 -top-4 right-0'
+              lg:text-[35px] text-[25px] bg-violet pt-3 px-2 rounded-xl border border-white hover:text-violet hover:bg-white absolute top-12 lg:-top-6  right-0'
               onClick={() => backButton()}
             >
               <span>Naspäť</span>
