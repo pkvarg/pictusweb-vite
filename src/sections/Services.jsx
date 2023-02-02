@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+
 const Services = () => {
   return (
     <div className='text-white lg:pb-[120px]'>
@@ -7,9 +9,16 @@ const Services = () => {
           Weby, ktoré Vám prinesú úspech
         </h1>
         <div className='flex lg:flex-row flex-col items-center py-16'>
-          <div className='lg:w-[50%] ml-[5%]'>
-            <img className='lg:w-[90%]' src='/design.png' alt='services' />
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, amount: 0.25 }}
+            transition={{ duration: 5 }}
+          >
+            <div className='lg:w-[50rem] ml-[5%]'>
+              <img className='lg:w-[90%]' src='/design.png' alt='services' />
+            </div>
+          </motion.div>
 
           <div className='lg:w-[50%] lg:mr-[5%] pl-[5%] flex flex-col lg:mt-0 mt-20 lg:gap-0 gap-20'>
             <div className='flex flex-row items-center gap-3'>
@@ -25,9 +34,6 @@ const Services = () => {
                 Logo použiteľné na webstránke, v podpise emailu či vizitke.
                 Jedinečné. Vaše.
               </p>
-              {/* <p className='text-[2rem]'>
-               
-              </p> */}
             </div>
             <div className='flex flex-row items-center gap-3'>
               <img
@@ -41,9 +47,6 @@ const Services = () => {
               <p className='text-[2rem]'>
                 Prezentujete služby, hobby alebo vážny biznis? Na štýle záleží.
               </p>
-              {/* <p className='text-[2rem]'>
-                
-              </p> */}
             </div>
           </div>
         </div>
@@ -64,9 +67,6 @@ const Services = () => {
                 Rýchly a spoľahlivý web fungujúci na PC, mobile aj tablete.
                 Non-stop.
               </p>
-              {/* <p className='text-[2rem]'>
-               
-              </p> */}
             </div>
             <div className='flex flex-row items-center gap-3'>
               <img
@@ -81,18 +81,22 @@ const Services = () => {
                 Formulár Vám zabezbečí, že správy od zákazníkov prídu vždy do
                 Vašej e-pošty.
               </p>
-              {/* <p className='text-[2rem]'>
-                
-              </p> */}
             </div>
           </div>
-          <div className='lg:w-[50%] lg:ml-[14.5%]'>
-            <img
-              className='lg:w-[75%] lg:mt-0 mt-20'
-              src='/server.png'
-              alt='server'
-            />
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, amount: 0.25 }}
+            transition={{ duration: 5 }}
+          >
+            <div className='lg:w-[50rem] lg:ml-[14.5%]'>
+              <img
+                className='lg:w-[75%] lg:mt-0 mt-20'
+                src='/server.png'
+                alt='server'
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>

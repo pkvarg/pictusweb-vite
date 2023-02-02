@@ -12,7 +12,7 @@ const Offer = () => {
         Ponuka
       </h1>
       <div className='flex lg:flex-row flex-col justify-center items-center gap-4 sm:h-[50rem] md:h-[90rem] lg:h-[39.5rem]'>
-        <div className='lg:border border-white lg:w-[25%] lg:h-[100%]'>
+        <div className='lg:border border-white lg:w-[25%] lg:h-[100%] hover:scale-[1.05]'>
           <h1 className='text-center text-[35px] mt-10'>Webstránka</h1>
           <div className='w-[15rem] h-2  bg-[#4d4fec] ml-auto mr-auto'></div>
           <h1 className='text-[70px] text-center my-10'>
@@ -35,7 +35,7 @@ const Offer = () => {
             </div>
           </h1>
         </div>
-        <div className='lg:border border-white lg:w-[25%] lg:h-[100%]'>
+        <div className='lg:border border-white lg:w-[25%] lg:h-[100%] hover:scale-[1.05]'>
           <h1 className='text-center text-[35px] mt-10'>Eshop</h1>
           <div className='w-[9rem] h-2 bg-[#ba98d2] ml-auto mr-auto'></div>
           <h1 className='text-[70px] text-center my-10'>
@@ -60,7 +60,7 @@ const Offer = () => {
             </div>
           </h1>
         </div>
-        <div className='lg:border border-white lg:w-[25%] lg:h-[100%]'>
+        <div className='lg:border border-white lg:w-[25%] lg:h-[100%] hover:scale-[1.05]'>
           <h1 className='text-center text-[35px] mt-10'>Extra požiadavky</h1>
           <div className='w-[20rem] h-2 bg-[#f9394f] ml-auto mr-auto'></div>
           <h1 className='text-[70px] text-center my-10'>

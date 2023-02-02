@@ -1,16 +1,33 @@
 import React from 'react'
+import { TitleText, TypingText } from '../components'
+import { motion } from 'framer-motion'
+import { staggerContainer } from '../motion'
+import styles from '../styles'
 
 const Hero = () => {
   return (
     <>
       <div className='flex lg:flex-row flex-col justify-center items-center mx-[10%] py-[100px]'>
-        <div className='flex flex-col justify-left lg:w-[50%]'>
-          <h1 className='text-white text-[7rem]'>Weby.</h1>
-          <h1 className='text-white text-[70px] mb-[2rem]'>Eshopy.</h1>
+        <motion.div
+          variants={staggerContainer}
+          initial='hidden'
+          whileInView='show'
+          viewport={{ once: false, amount: 0.25 }}
+          className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8 lg:py-[100px] py-[50px]`}
+        >
+          <div className='flex flex-col justify-left lg:w-[50%]'>
+            <h1 className='text-white text-[7rem]'>
+              <TypingText title='Weby.' />
+            </h1>
+            <h1 className='text-white text-[70px] mb-[2rem]'>
+              <TypingText title='Eshopy.' />
+            </h1>
 
-          {/* <img className='w-[60%] ml-[-5%]' src='/tech.png' alt='mern-stack' /> */}
-          <h1 className='text-white text-[50px]'>Moderné technológie.</h1>
-        </div>
+            <div className='text-white text-[50px]'>
+              <TitleText title='Moderné technológie.' />
+            </div>
+          </div>
+        </motion.div>
         <div className='lg:w-[50%]'>
           <img
             className='w-[100%] ml-auto lg:mt-0 mt-[12rem]'
