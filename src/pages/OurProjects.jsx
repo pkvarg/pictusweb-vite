@@ -1,79 +1,88 @@
 import React, { useState, useRef } from 'react'
 import Footer from '../components/Footer'
 import Contact from '../sections/Contact'
-import emailjs from '@emailjs/browser'
-import Message from '../components/Message'
+import { motion } from 'framer-motion'
+// import emailjs from '@emailjs/browser'
+// import Message from '../components/Message'
 
 import NavbarProjects from '../components/NavbarProjects'
 
 const OurProjects = () => {
-  const [message, setMessage] = useState(null)
-  const [messageSuccess, setMessageSuccess] = useState(null)
-  const [name, setName] = useState('')
-  const [subject, setSubject] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [mailMessage, setMailMessage] = useState('')
-  const [checkBox, setCheckBox] = useState(false)
+  // const [message, setMessage] = useState(null)
+  // const [messageSuccess, setMessageSuccess] = useState(null)
+  // const [name, setName] = useState('')
+  // const [subject, setSubject] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [phone, setPhone] = useState('')
+  // const [mailMessage, setMailMessage] = useState('')
+  // const [checkBox, setCheckBox] = useState(false)
 
   const handleCheckBox = () => {
     setCheckBox((current) => !current)
   }
 
-  const form = useRef()
-  const x = import.meta.env.VITE_EMAIL_EXTRA_ONE
-  const y = import.meta.env.VITE_EMAIL_EXTRA_TWO
-  const [passwordGroupOne, setPasswordGroupOne] = useState(x)
-  const [passwordGroupTwo, setPasswordGroupTwo] = useState(y)
-  const sendEmail = (e) => {
-    e.preventDefault()
+  // const form = useRef()
+  // const x = import.meta.env.VITE_EMAIL_EXTRA_ONE
+  // const y = import.meta.env.VITE_EMAIL_EXTRA_TWO
+  // const [passwordGroupOne, setPasswordGroupOne] = useState(x)
+  // const [passwordGroupTwo, setPasswordGroupTwo] = useState(y)
+  // const sendEmail = (e) => {
+  //   e.preventDefault()
 
-    if (passwordGroupOne !== x || passwordGroupTwo !== y) {
-      setMessage('Neodoslané! Napíšte nám na info@pictusweb.sk, prosím.')
-      setName('')
-      setSubject('')
-      setEmail('')
-      setPhone('')
-      setMailMessage('')
-      const element = document.getElementById('contact')
-      element.scrollIntoView({ behavior: 'smooth' })
-    } else {
-      emailjs
-        .sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE,
-          import.meta.env.VITE_EMAILJS_TEMPLATE,
-          form.current,
-          import.meta.env.VITE_EMAILJS_USER
-        )
-        .then(
-          (result) => {
-            console.log(result.text)
-            console.log('message sent')
-          },
-          (error) => {
-            console.log(error.text)
-          }
-        )
-      setName('')
-      setSubject('')
-      setEmail('')
-      setPhone('')
-      setMailMessage('')
-      const element = document.getElementById('contact')
-      element.scrollIntoView({ behavior: 'smooth' })
-      setMessageSuccess('Vaša správa bola úspešne odoslaná!')
-    }
-  }
+  //   if (passwordGroupOne !== x || passwordGroupTwo !== y) {
+  //     setMessage('Neodoslané! Napíšte nám na info@pictusweb.sk, prosím.')
+  //     setName('')
+  //     setSubject('')
+  //     setEmail('')
+  //     setPhone('')
+  //     setMailMessage('')
+  //     const element = document.getElementById('contact')
+  //     element.scrollIntoView({ behavior: 'smooth' })
+  //   } else {
+  //     emailjs
+  //       .sendForm(
+  //         import.meta.env.VITE_EMAILJS_SERVICE,
+  //         import.meta.env.VITE_EMAILJS_TEMPLATE,
+  //         form.current,
+  //         import.meta.env.VITE_EMAILJS_USER
+  //       )
+  //       .then(
+  //         (result) => {
+  //           console.log(result.text)
+  //           console.log('message sent')
+  //         },
+  //         (error) => {
+  //           console.log(error.text)
+  //         }
+  //       )
+  //     setName('')
+  //     setSubject('')
+  //     setEmail('')
+  //     setPhone('')
+  //     setMailMessage('')
+  //     const element = document.getElementById('contact')
+  //     element.scrollIntoView({ behavior: 'smooth' })
+  //     setMessageSuccess('Vaša správa bola úspešne odoslaná!')
+  //   }
+  // }
   return (
     <>
       <div className='px-4 lg:px-0 hero-gradient text-white flex flex-col justify-center items-center gap-40'>
         <NavbarProjects />
         <h1 className='text-[56px]'>Realizované projekty</h1>
-        <img
-          className='hidden md:flex lg:w-[75%]  h-auto'
-          src='/js-web.png'
-          alt='js-web-development'
-        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 0.25 }}
+          transition={{ duration: 3 }}
+          className='flex justify-center'
+        >
+          <img
+            className='hidden md:flex lg:w-[75%]  h-auto'
+            src='/js-web.png'
+            alt='js-web-development'
+          />
+        </motion.div>
         <h1 className='text-[32.5px] text-center'>
           V našich projektoch používame moderné technológie založené na jazyku
           Javascript.
@@ -82,14 +91,25 @@ const OurProjects = () => {
           <div className='flex flex-col justify-center items-center'>
             <h2 className='text-[30px]'>Prezentačný web</h2>
             <h3 className='text-[25px]'>v základnej cene</h3>
+            <a href='https://github.com/pkvarg/ioana-vite' target='_blank'>
+              <img className='mt-10' src='/git-hub-green.png' alt='git-hub' />
+            </a>
           </div>
-          <a href='https://ioana-illustrations.eu' target='_blank'>
-            <img
-              className='w-[40rem]'
-              src='/ioana-page.png'
-              alt='ioana-illustrations.eu'
-            />
-          </a>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, amount: 0.25 }}
+            transition={{ duration: 3 }}
+            className='flex justify-center'
+          >
+            <a href='https://ioana-illustrations.eu' target='_blank'>
+              <img
+                className='w-[40rem]'
+                src='/ioana-page.png'
+                alt='ioana-illustrations.eu'
+              />
+            </a>
+          </motion.div>
         </div>
         <div className='flex flex-col lg:flex-row justify-center items-center gap-10'>
           <h1 className='text-[30px] mt-2'>Technológie:</h1>
@@ -163,16 +183,27 @@ const OurProjects = () => {
           <p className='text-[30px] mt-2'>Tailwind css</p>
         </div>
         <div className='flex lg:flex-row flex-col items-center justify-center gap-40'>
-          <a href='https://kvalitnamontaz.sk' target='_blank'>
-            <img
-              className='w-[40rem]'
-              src='/dvl-page.png'
-              alt='kvalitnamontaz.sk'
-            />
-          </a>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, amount: 0.25 }}
+            transition={{ duration: 3 }}
+            className='flex justify-center'
+          >
+            <a href='https://kvalitnamontaz.sk' target='_blank'>
+              <img
+                className='w-[40rem]'
+                src='/dvl-page.png'
+                alt='kvalitnamontaz.sk'
+              />
+            </a>
+          </motion.div>
           <div className='flex flex-col justify-center items-center'>
             <h2 className='text-[30px]'>Prezentačný web</h2>
             <h3 className='text-[25px]'>v základnej cene</h3>
+            <a href='https://github.com/pkvarg/vite-dvl' target='_blank'>
+              <img className='mt-10' src='/git-hub-green.png' alt='git-hub' />
+            </a>
           </div>
         </div>
         <div className='flex flex-col lg:flex-row justify-center items-center gap-10'>
@@ -250,16 +281,28 @@ const OurProjects = () => {
           <div className='flex flex-col justify-center items-center'>
             <h2 className='text-[30px]'>Moderný eshop</h2>
             <h3 className='text-[25px]'>v základnej cene</h3>
+            <a href='https://github.com/pkvarg/prud' target='_blank'>
+              <img className='mt-10' src='/git-hub-green.png' alt='git-hub' />
+            </a>
           </div>
-          <a href='https://pictusweb.art' target='_blank'>
-            <img className='w-[40rem]' src='/prud-page.png' alt='prud.sk' />
-          </a>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, amount: 0.25 }}
+            transition={{ duration: 3 }}
+            className='flex justify-center'
+          >
+            <a href='https://pictusweb.art' target='_blank'>
+              <img className='w-[40rem]' src='/prud-page.png' alt='prud.sk' />
+            </a>
+          </motion.div>
         </div>
+
         <h3 className='mx-4 lg:mx-40 text-[25px] text-center '>
-          Admin menu na mieru pre pridávanie produktov, bannerov, mp3, videí,
-          spravovanie užívateľov rôznych kategórií a objednávok. Automatické
+          Admin menu na mieru pre správu produktov, objednávok, recenzií,
+          bannerov, mp3, videí a užívateľov s rôznymi prístupmi. Automatické
           generovanie faktúr odosielaných na email. Platba PayPal, kartou či na
-          dobierku. Prihlásenie cez mail alebo Google.
+          dobierku. Registrácia a prihlásenie cez email alebo Google.
         </h3>
         <div className='flex flex-col lg:flex-row justify-center items-center gap-10 pb-0'>
           <h1 className='text-[30px] mt-2'>Technológie:</h1>
@@ -285,7 +328,9 @@ const OurProjects = () => {
           />
           <p className='text-[30px] mt-2'>Node JS</p>
         </div>
-        <Contact />
+        <div className='-mt-60 lg:-mt-40 w-[24rem] md:w-[48rem] lg:w-[90rem]'>
+          <Contact />
+        </div>
         <div className='-mt-40'>
           <Footer />
         </div>

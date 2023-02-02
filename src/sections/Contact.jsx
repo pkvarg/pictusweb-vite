@@ -69,7 +69,7 @@ const ContactForm = () => {
       >
         Napíšte nám správu
       </h1>
-      <div className='mx-[13.5%] lg:mx-0 flex lg:flex-row flex-col lg:justify-center text-white lg:py-[100px] '>
+      <div className='mx-4 md:mx-6 lg:mx-0 flex lg:flex-row flex-col lg:justify-center text-white lg:py-[100px] '>
         <div className='pt-[50px] lg:pt-0 lg:pt-[0px] '>
           {messageSuccess && (
             <Message variant='success'>{messageSuccess}</Message>
