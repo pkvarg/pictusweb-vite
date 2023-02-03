@@ -28,6 +28,7 @@ const Home = () => {
             color: '#000',
             textAlign: 'left',
             fontSize: '22.5px',
+            textAlign: 'justify',
           }}
           buttonStyle={{
             background: '#1d9f2f',

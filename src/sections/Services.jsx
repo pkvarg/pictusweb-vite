@@ -15,7 +15,7 @@ const Services = () => {
             viewport={{ once: false, amount: 0.25 }}
             transition={{ duration: 5 }}
           >
-            <div className='lg:w-[50rem] ml-[5%]'>
+            <div className='lg:w-[35rem] ml-[5%]'>
               <img className='lg:w-[90%]' src='/design.png' alt='services' />
             </div>
           </motion.div>
@@ -27,7 +27,7 @@ const Services = () => {
                 src='/service-check.png'
                 alt='service'
               />
-              <h3 className='text-[3rem] mt-[18px]'>Jedinečné logo</h3>
+              <h3 className='text-[2.5rem] mt-[18px]'>Jedinečné logo</h3>
             </div>
             <div>
               <p className='text-[2rem]'>
@@ -41,7 +41,7 @@ const Services = () => {
                 src='/service-check.png'
                 alt='service'
               />
-              <h3 className='text-[3rem] mt-[18px]'>Štýl podľa vkusu</h3>
+              <h3 className='text-[2.5rem] mt-[18px]'>Štýl podľa vkusu</h3>
             </div>
             <div>
               <p className='text-[2rem]'>
@@ -60,7 +60,7 @@ const Services = () => {
                 src='/service-check.png'
                 alt='service'
               />
-              <h3 className='text-[3rem] mt-[18px]'>Non-stop prevádzka</h3>
+              <h3 className='text-[2.5rem] mt-[18px]'>Non-stop prevádzka</h3>
             </div>
             <div>
               <p className='text-[2rem]'>
@@ -74,7 +74,7 @@ const Services = () => {
                 src='/service-check.png'
                 alt='service'
               />
-              <h3 className='text-[3rem] mt-[18px]'>Nie ste na príjme?</h3>
+              <h3 className='text-[2.5rem] mt-[18px]'>Nie ste na príjme?</h3>
             </div>
             <div>
               <p className='text-[2rem]'>
@@ -89,7 +89,7 @@ const Services = () => {
             viewport={{ once: false, amount: 0.25 }}
             transition={{ duration: 5 }}
           >
-            <div className='lg:w-[50rem] lg:ml-[14.5%]'>
+            <div className='lg:w-[35rem] lg:ml-[14.5%]'>
               <img
                 className='lg:w-[75%] lg:mt-0 mt-20'
                 src='/server.png'
