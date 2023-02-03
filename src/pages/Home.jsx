@@ -26,7 +26,6 @@ const Home = () => {
           style={{
             background: '#e7e7e8',
             color: '#000',
-            textAlign: 'left',
             fontSize: '22.5px',
             textAlign: 'justify',
           }}
