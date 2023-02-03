@@ -1,70 +1,19 @@
-import React, { useState, useRef } from 'react'
+import React, { useLayoutEffect } from 'react'
 import Footer from '../components/Footer'
 import Contact from '../sections/Contact'
 import { motion } from 'framer-motion'
-// import emailjs from '@emailjs/browser'
-// import Message from '../components/Message'
 
 import NavbarProjects from '../components/NavbarProjects'
 
 const OurProjects = () => {
-  // const [message, setMessage] = useState(null)
-  // const [messageSuccess, setMessageSuccess] = useState(null)
-  // const [name, setName] = useState('')
-  // const [subject, setSubject] = useState('')
-  // const [email, setEmail] = useState('')
-  // const [phone, setPhone] = useState('')
-  // const [mailMessage, setMailMessage] = useState('')
-  // const [checkBox, setCheckBox] = useState(false)
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   const handleCheckBox = () => {
     setCheckBox((current) => !current)
   }
 
-  // const form = useRef()
-  // const x = import.meta.env.VITE_EMAIL_EXTRA_ONE
-  // const y = import.meta.env.VITE_EMAIL_EXTRA_TWO
-  // const [passwordGroupOne, setPasswordGroupOne] = useState(x)
-  // const [passwordGroupTwo, setPasswordGroupTwo] = useState(y)
-  // const sendEmail = (e) => {
-  //   e.preventDefault()
-
-  //   if (passwordGroupOne !== x || passwordGroupTwo !== y) {
-  //     setMessage('Neodoslané! Napíšte nám na info@pictusweb.sk, prosím.')
-  //     setName('')
-  //     setSubject('')
-  //     setEmail('')
-  //     setPhone('')
-  //     setMailMessage('')
-  //     const element = document.getElementById('contact')
-  //     element.scrollIntoView({ behavior: 'smooth' })
-  //   } else {
-  //     emailjs
-  //       .sendForm(
-  //         import.meta.env.VITE_EMAILJS_SERVICE,
-  //         import.meta.env.VITE_EMAILJS_TEMPLATE,
-  //         form.current,
-  //         import.meta.env.VITE_EMAILJS_USER
-  //       )
-  //       .then(
-  //         (result) => {
-  //           console.log(result.text)
-  //           console.log('message sent')
-  //         },
-  //         (error) => {
-  //           console.log(error.text)
-  //         }
-  //       )
-  //     setName('')
-  //     setSubject('')
-  //     setEmail('')
-  //     setPhone('')
-  //     setMailMessage('')
-  //     const element = document.getElementById('contact')
-  //     element.scrollIntoView({ behavior: 'smooth' })
-  //     setMessageSuccess('Vaša správa bola úspešne odoslaná!')
-  //   }
-  // }
   return (
     <>
       <div className='px-4 lg:px-0 hero-gradient text-white flex flex-col justify-center items-center gap-40'>
