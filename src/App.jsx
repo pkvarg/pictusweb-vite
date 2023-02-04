@@ -5,8 +5,8 @@ import { ScrollToTop } from './components'
 import './App.css'
 
 function App() {
-  let lng = JSON.parse(window.localStorage.getItem('language'))
-  const [language, setLanguage] = useState(lng)
+  // let lng = JSON.parse(window.localStorage.getItem('language'))
+  const [language, setLanguage] = useState('slovak')
 
   const handleLanguage = (language) => {
     setLanguage(language)
