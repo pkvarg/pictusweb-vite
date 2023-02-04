@@ -5,15 +5,34 @@ import { ScrollToTop } from './components'
 import './App.css'
 
 function App() {
-  const [language, setLanguage] = useState('slovak')
+  let lng = JSON.parse(window.localStorage.getItem('language'))
+  const [language, setLanguage] = useState(lng || 'slovak')
 
-  let callback = (language) => {
+  const handleLanguage = (language) => {
     setLanguage(language)
+    window.localStorage.setItem('language', JSON.stringify(language))
   }
-  console.log(language)
 
   return (
     <BrowserRouter>
+      <div className='relative'>
+        {language == 'slovak' && (
+          <button
+            onClick={() => handleLanguage('english')}
+            className='mr-3 absolute text-white top-[7rem] left-[10px] lg:top-[30px] lg:left-[50%] text-[30px]'
+          >
+            <img className='w-[120%]' src='/english.png' alt='english' />
+          </button>
+        )}
+        {language == 'english' && (
+          <button
+            onClick={() => handleLanguage('slovak')}
+            className='mr-3 absolute text-white top-[7rem] left-[10px] lg:top-[30px] lg:left-[50%] text-[30px]'
+          >
+            <img className='w-[120%]' src='/slovak.png' alt='slovak' />
+          </button>
+        )}
+      </div>
       <Routes>
         <Route path='/' element={<Home language={language} />} />
         <Route path='/projects' element={<OurProjects language={language} />} />

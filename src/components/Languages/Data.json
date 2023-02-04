@@ -57,7 +57,15 @@
     "contactSend": "Odoslať",
     "contactError": "Neodoslané! Napíšte nám na info@pictusweb.sk, prosím.",
     "contactError2": "Chyba! Napíšte nám na info@pictusweb.sk, prosím.",
-    "contactSuccess": "Vaša správa bola úspešne odoslaná!"
+    "contactSuccess": "Vaša správa bola úspešne odoslaná!",
+
+    "ourProjectsTitle": "Realizované projekty",
+    "ourProjectsSub": "V našich projektoch používame moderné technológie založené na jazyku JavaScript.",
+    "ourProjectsWebDesc1": "Prezentačný web",
+    "ourProjectsWebDesc2": "v základnej cene",
+    "ourProjectsTechs": "Technológie:",
+    "ourProjectsEshopDesc": "Moderný eshop",
+    "ourProjectsEshopProps": "Admin menu na mieru pre správu produktov, objednávok, recenzií, bannerov, mp3, videí a užívateľov s rôznymi prístupmi. Automatické generovanie faktúr odosielaných na email. Platba PayPal, kartou či na dobierku. Registrácia a prihlásenie cez email alebo Google."
   },
   "english": {
     "navbarOffer": "Offer",
@@ -113,6 +121,14 @@
     "contactSend": "Send",
     "contactError": "Not sent! Contact us via info@pictusweb.sk, please.",
     "contactError2": "Error! Write to info@pictusweb.sk, please.",
-    "contactSuccess": "Message successfully sent!"
+    "contactSuccess": "Message successfully sent!",
+
+    "ourProjectsTitle": "Realized projects",
+    "ourProjectsSub": "We use modern technologies based on JavaScript programming language.",
+    "ourProjectsWebDesc1": "Presentational web",
+    "ourProjectsWebDesc2": "for basic price",
+    "ourProjectsTechs": "Technologies:",
+    "ourProjectsEshopDesc": "Modern eshop",
+    "ourProjectsEshopProps": "Custom Admin menu for managing of product, orders, reviews, banners, mp3s, videos and users with different accesses. Automatic generating of invoices send to email. Payment via PayPal, card or cash. Registration and sign in via email or Google."
   }
 }

@@ -1,11 +1,23 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import Footer from '../components/Footer'
 import Contact from '../sections/Contact'
 import { motion } from 'framer-motion'
+import Translation from '../components/Languages/Data.json'
 
 import NavbarProjects from '../components/NavbarProjects'
 
 const OurProjects = () => {
+  let lng = JSON.parse(window.localStorage.getItem('language'))
+  const [language, setLanguage] = useState(lng || 'slovak')
+  console.log(language)
+  const [content, setContent] = useState({})
+
+  useEffect(() => {
+    if (language == 'slovak') {
+      setContent(Translation.slovak)
+    } else setContent(Translation.english)
+  })
+
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   })
@@ -17,8 +29,8 @@ const OurProjects = () => {
   return (
     <>
       <div className='px-4 lg:px-0 hero-gradient text-white flex flex-col justify-center items-center gap-40'>
-        <NavbarProjects />
-        <h1 className='text-[56px]'>Realizované projekty</h1>
+        <NavbarProjects language={language} />
+        <h1 className='text-[56px]'>{content.ourProjectsTitle}</h1>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -32,14 +44,11 @@ const OurProjects = () => {
             alt='js-web-development'
           />
         </motion.div>
-        <h1 className='text-[32.5px] text-center'>
-          V našich projektoch používame moderné technológie založené na jazyku
-          JavaScript.
-        </h1>
+        <h1 className='text-[32.5px] text-center'>{content.ourProjectsSub}</h1>
         <div className='flex lg:flex-row flex-col items-center justify-center gap-40 '>
           <div className='flex flex-col justify-center items-center'>
-            <h2 className='text-[30px]'>Prezentačný web</h2>
-            <h3 className='text-[25px]'>v základnej cene</h3>
+            <h2 className='text-[30px]'>{content.ourProjectsWebDesc1}</h2>
+            <h3 className='text-[25px]'>{content.ourProjectsWebDesc2}</h3>
             <a href='https://github.com/pkvarg/ioana-vite' target='_blank'>
               <img className='mt-10' src='/git-hub-green.png' alt='git-hub' />
             </a>
@@ -61,7 +70,7 @@ const OurProjects = () => {
           </motion.div>
         </div>
         <div className='flex flex-col lg:flex-row justify-center items-center gap-10'>
-          <h1 className='text-[30px] mt-2'>Technológie:</h1>
+          <h1 className='text-[30px] mt-2'>{content.ourProjectsTechs}</h1>
 
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -148,15 +157,15 @@ const OurProjects = () => {
             </a>
           </motion.div>
           <div className='flex flex-col justify-center items-center'>
-            <h2 className='text-[30px]'>Prezentačný web</h2>
-            <h3 className='text-[25px]'>v základnej cene</h3>
+            <h2 className='text-[30px]'>{content.ourProjectsWebDesc1}</h2>
+            <h3 className='text-[25px]'>{content.ourProjectsWebDesc2}</h3>
             <a href='https://github.com/pkvarg/vite-dvl' target='_blank'>
               <img className='mt-10' src='/git-hub-green.png' alt='git-hub' />
             </a>
           </div>
         </div>
         <div className='flex flex-col lg:flex-row justify-center items-center gap-10'>
-          <h1 className='text-[30px] mt-2'>Technológie:</h1>
+          <h1 className='text-[30px] mt-2'>{content.ourProjectsTechs}</h1>
 
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -228,8 +237,8 @@ const OurProjects = () => {
         </div>
         <div className='flex lg:flex-row flex-col items-center justify-center gap-40'>
           <div className='flex flex-col justify-center items-center'>
-            <h2 className='text-[30px]'>Moderný eshop</h2>
-            <h3 className='text-[25px]'>v základnej cene</h3>
+            <h2 className='text-[30px]'>{content.ourProjectsEshopDesc}</h2>
+            <h3 className='text-[25px]'>{content.ourProjectsWebDesc2}</h3>
             <a href='https://github.com/pkvarg/prud' target='_blank'>
               <img className='mt-10' src='/git-hub-green.png' alt='git-hub' />
             </a>
@@ -248,13 +257,10 @@ const OurProjects = () => {
         </div>
 
         <h3 className='mx-4 lg:mx-40 text-[25px] text-center '>
-          Admin menu na mieru pre správu produktov, objednávok, recenzií,
-          bannerov, mp3, videí a užívateľov s rôznymi prístupmi. Automatické
-          generovanie faktúr odosielaných na email. Platba PayPal, kartou či na
-          dobierku. Registrácia a prihlásenie cez email alebo Google.
+          {content.ourProjectsEshopProps}
         </h3>
         <div className='flex flex-col lg:flex-row justify-center items-center gap-10 pb-0'>
-          <h1 className='text-[30px] mt-2'>Technológie:</h1>
+          <h1 className='text-[30px] mt-2'>{content.ourProjectsTechs}</h1>
 
           <img
             className='w-[35%] lg:w-[3.5%]'

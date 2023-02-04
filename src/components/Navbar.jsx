@@ -5,14 +5,8 @@ import styles from '../styles'
 import { Link } from 'react-scroll'
 import Translation from '../components/Languages/Data.json'
 
-const Navbar = ({ callback }) => {
-  const [language, setLanguage] = useState('')
+const Navbar = ({ language }) => {
   const [content, setContent] = useState({})
-
-  const handleCallback = (language) => {
-    setLanguage(language)
-    callback(language)
-  }
 
   useEffect(() => {
     if (language == 'slovak') {
@@ -120,17 +114,6 @@ const Navbar = ({ callback }) => {
             </div>
           </div>
         </div>
-        <button
-          value='english'
-          onClick={(e) => handleCallback(e.target.value)}
-          className='mr-3'
-        >
-          english{' '}
-        </button>
-        <button value='slovak' onClick={(e) => handleCallback(e.target.value)}>
-          {' '}
-          slovak
-        </button>
       </nav>
     </>
   )

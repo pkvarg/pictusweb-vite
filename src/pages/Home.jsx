@@ -8,15 +8,15 @@ import Contact from '../sections/Contact'
 import { Footer } from '../components'
 import CookieConsent from 'react-cookie-consent'
 
-const Home = () => {
-  const [language, setLanguage] = useState()
-  const callback = (payload) => {
-    setLanguage(payload)
-  }
+const Home = ({ language }) => {
+  // const [language, setLanguage] = useState()
+  // const callback = (payload) => {
+  //   setLanguage(payload)
+  // }
   return (
     <>
       <div className='hero-gradient'>
-        <Navbar callback={callback} />
+        <Navbar language={language} />
 
         <Hero language={language} />
         <Services language={language} />
