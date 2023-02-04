@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
   let lng = JSON.parse(window.localStorage.getItem('language'))
-  const [language, setLanguage] = useState(lng || 'slovak')
+  const [language, setLanguage] = useState(lng)
 
   const handleLanguage = (language) => {
     setLanguage(language)
@@ -19,7 +19,7 @@ function App() {
         {language == 'slovak' && (
           <button
             onClick={() => handleLanguage('english')}
-            className='mr-3 absolute text-white top-[7rem] left-[10px] lg:top-[30px] lg:left-[50%] text-[30px]'
+            className='mr-3 absolute text-white top-[8rem] left-[2rem] lg:top-[30px] lg:left-[50%] text-[30px]'
           >
             <img className='w-[120%]' src='/english.png' alt='english' />
           </button>
@@ -27,7 +27,7 @@ function App() {
         {language == 'english' && (
           <button
             onClick={() => handleLanguage('slovak')}
-            className='mr-3 absolute text-white top-[7rem] left-[10px] lg:top-[30px] lg:left-[50%] text-[30px]'
+            className='mr-3 absolute text-white top-[8rem] left-[2rem] lg:top-[30px] lg:left-[50%] text-[30px]'
           >
             <img className='w-[120%]' src='/slovak.png' alt='slovak' />
           </button>
@@ -35,7 +35,7 @@ function App() {
       </div>
       <Routes>
         <Route path='/' element={<Home language={language} />} />
-        <Route path='/projects' element={<OurProjects language={language} />} />
+        <Route path='/projects' element={<OurProjects />} />
         <Route path='/about' element={<About />} />
         <Route path='/gdpr' element={<Gdpr />} />
         <Route path='/trade-rules' element={<TradeRules />} />
