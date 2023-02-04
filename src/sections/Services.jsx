@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Translation from '../components/Languages/Data.json'
 
-const Services = () => {
+const Services = ({ language }) => {
+  const [content, setContent] = useState({})
+
+  useEffect(() => {
+    if (language == 'slovak') {
+      setContent(Translation.slovak)
+    } else setContent(Translation.english)
+  })
   return (
     <div className='text-white lg:pb-[120px]'>
       <div className='lg:border border-white border-3 rounded-[15px] mt-[120px] lg:max-w-[75%] mx-auto'>
         <h1 className='lg:text-[4.5rem] text-[2.5rem] text-center mt-20'>
-          Weby, ktoré Vám prinesú úspech
+          {content.servicesTitle}
         </h1>
         <div className='flex lg:flex-row flex-col items-center py-16'>
           <motion.div
@@ -27,13 +35,12 @@ const Services = () => {
                 src='/service-check.png'
                 alt='service'
               />
-              <h3 className='text-[2.5rem] mt-[18px]'>Jedinečné logo</h3>
+              <h3 className='text-[2.5rem] mt-[18px]'>
+                {content.servicesLogoTitle}
+              </h3>
             </div>
             <div>
-              <p className='text-[2rem]'>
-                Logo použiteľné na webstránke, v podpise emailu či vizitke.
-                Jedinečné. Vaše.
-              </p>
+              <p className='text-[2rem]'>{content.servicesLogoDesc}</p>
             </div>
             <div className='flex flex-row items-center gap-3'>
               <img
@@ -41,12 +48,13 @@ const Services = () => {
                 src='/service-check.png'
                 alt='service'
               />
-              <h3 className='text-[2.5rem] mt-[18px]'>Štýl podľa vkusu</h3>
+              <h3 className='text-[2.5rem] mt-[18px]'>
+                {' '}
+                {content.servicesStyleTitle}
+              </h3>
             </div>
             <div>
-              <p className='text-[2rem]'>
-                Prezentujete služby, hobby alebo vážny biznis? Na štýle záleží.
-              </p>
+              <p className='text-[2rem]'>{content.servicesStyleDesc}</p>
             </div>
           </div>
         </div>
@@ -60,13 +68,13 @@ const Services = () => {
                 src='/service-check.png'
                 alt='service'
               />
-              <h3 className='text-[2.5rem] mt-[18px]'>Non-stop prevádzka</h3>
+              <h3 className='text-[2.5rem] mt-[18px]'>
+                {' '}
+                {content.servicesNonStopTitle}
+              </h3>
             </div>
             <div>
-              <p className='text-[2rem]'>
-                Rýchly a spoľahlivý web fungujúci na PC, mobile aj tablete.
-                Non-stop.
-              </p>
+              <p className='text-[2rem]'>{content.servicesNonStopDesc}</p>
             </div>
             <div className='flex flex-row items-center gap-3'>
               <img
@@ -74,13 +82,13 @@ const Services = () => {
                 src='/service-check.png'
                 alt='service'
               />
-              <h3 className='text-[2.5rem] mt-[18px]'>Nie ste na príjme?</h3>
+              <h3 className='text-[2.5rem] mt-[18px]'>
+                {' '}
+                {content.servicesAwayTitle}
+              </h3>
             </div>
             <div>
-              <p className='text-[2rem]'>
-                Formulár Vám zabezbečí, že správy od zákazníkov prídu vždy do
-                Vašej e-pošty.
-              </p>
+              <p className='text-[2rem]'>{content.servicesAwayDesc}</p>
             </div>
           </div>
           <motion.div

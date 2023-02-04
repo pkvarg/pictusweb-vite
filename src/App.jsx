@@ -5,11 +5,18 @@ import { ScrollToTop } from './components'
 import './App.css'
 
 function App() {
+  const [language, setLanguage] = useState('slovak')
+
+  let callback = (language) => {
+    setLanguage(language)
+  }
+  console.log(language)
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/projects' element={<OurProjects />} />
+        <Route path='/' element={<Home language={language} />} />
+        <Route path='/projects' element={<OurProjects language={language} />} />
         <Route path='/about' element={<About />} />
         <Route path='/gdpr' element={<Gdpr />} />
         <Route path='/trade-rules' element={<TradeRules />} />

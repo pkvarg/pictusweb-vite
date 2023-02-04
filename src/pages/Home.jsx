@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../sections/Hero'
 import Services from '../sections/Services'
@@ -9,18 +9,22 @@ import { Footer } from '../components'
 import CookieConsent from 'react-cookie-consent'
 
 const Home = () => {
+  const [language, setLanguage] = useState()
+  const callback = (payload) => {
+    setLanguage(payload)
+  }
   return (
     <>
       <div className='hero-gradient'>
-        <Navbar />
+        <Navbar callback={callback} />
 
-        <Hero />
-        <Services />
+        <Hero language={language} />
+        <Services language={language} />
       </div>
       <div className='second-gradient'>
-        <Projects />
-        <Offer />
-        <Contact />
+        <Projects language={language} />
+        <Offer language={language} />
+        <Contact language={language} />
         <CookieConsent
           location='bottom'
           style={{

@@ -1,10 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { navVariants } from './../motion'
 import styles from '../styles'
 import { Link } from 'react-scroll'
+import Translation from '../components/Languages/Data.json'
 
-const Navbar = () => {
+const Navbar = ({ callback }) => {
+  const [language, setLanguage] = useState('')
+  const [content, setContent] = useState({})
+
+  const handleCallback = (language) => {
+    setLanguage(language)
+    callback(language)
+  }
+
+  useEffect(() => {
+    if (language == 'slovak') {
+      setContent(Translation.slovak)
+    } else setContent(Translation.english)
+  })
   const [navbar, setNavbar] = useState(false)
 
   return (
@@ -13,7 +27,7 @@ const Navbar = () => {
         <div className='justify-between px-4 mx-auto lg:max-w-[90%] md:items-center md:flex md:px-8'>
           <div>
             <div className='flex items-center justify-between py-3 md:py-5 md:block'>
-              <a className='text-[2.5rem]' href='/'>
+              <a className='text-[2.05rem]' href='/'>
                 &#60;&#47;&#62; PICTUSWEB development
               </a>
               <div className='md:hidden'>
@@ -68,17 +82,17 @@ const Navbar = () => {
                     smooth={true}
                     offset={0}
                     duration={500}
-                    className='text-[2.5rem] hover:text-dark-red'
+                    className='text-[2.05rem] hover:text-dark-red'
                   >
-                    Ponuka
+                    {content.navbarOffer}
                   </Link>
                 </li>
                 <li>
                   <a
                     href='/projects'
-                    className='text-[2.5rem] hover:text-dark-red'
+                    className='text-[2.05rem] hover:text-dark-red'
                   >
-                    Projekty
+                    {content.navbarProjects}
                   </a>
                 </li>
 
@@ -89,9 +103,9 @@ const Navbar = () => {
                     smooth={true}
                     offset={0}
                     duration={500}
-                    className='text-[2.5rem] hover:text-dark-red'
+                    className='text-[2.05rem] hover:text-dark-red'
                   >
-                    Kontakt
+                    {content.navbarContact}
                   </Link>
                 </li>
                 {/* <li>
@@ -106,6 +120,17 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <button
+          value='english'
+          onClick={(e) => handleCallback(e.target.value)}
+          className='mr-3'
+        >
+          english{' '}
+        </button>
+        <button value='slovak' onClick={(e) => handleCallback(e.target.value)}>
+          {' '}
+          slovak
+        </button>
       </nav>
     </>
   )

@@ -1,8 +1,16 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import Message from '../components/Message'
+import Translation from '../components/Languages/Data.json'
 
-const ContactForm = () => {
+const ContactForm = ({ language }) => {
+  const [content, setContent] = useState({})
+
+  useEffect(() => {
+    if (language == 'slovak') {
+      setContent(Translation.slovak)
+    } else setContent(Translation.english)
+  })
   const [message, setMessage] = useState(null)
   const [messageSuccess, setMessageSuccess] = useState(null)
   const [name, setName] = useState('')
@@ -25,7 +33,7 @@ const ContactForm = () => {
     e.preventDefault()
 
     if (passwordGroupOne !== x || passwordGroupTwo !== y) {
-      setMessage('Neodoslané! Napíšte nám na info@pictusweb.sk, prosím.')
+      setMessage(content.contactError)
       setName('')
       setSubject('')
       setEmail('')
@@ -44,15 +52,13 @@ const ContactForm = () => {
         .then(
           (result) => {
             console.log(result.text)
-            setMessageSuccess('Vaša správa bola úspešne odoslaná!')
+            setMessageSuccess(content.contactSuccess)
 
             console.log('message sent')
           },
           (error) => {
             console.log(error.text)
-            setMessageSuccess(
-              'Chyba! Napíšte nám na info@pictusweb.sk, prosím.'
-            )
+            setMessageSuccess(content.contactError2)
           }
         )
 
@@ -63,7 +69,6 @@ const ContactForm = () => {
       setMailMessage('')
       const element = document.getElementById('contact')
       element.scrollIntoView({ behavior: 'smooth' })
-      // setMessageSuccess('Vaša správa bola úspešne odoslaná!')
     }
   }
 
@@ -73,7 +78,7 @@ const ContactForm = () => {
         id='contact'
         className='text-[35px] lg:text-[60px] text-white text-center lg:pt-0 pt-[55px]'
       >
-        Napíšte nám správu
+        {content.contactTitle}
       </h1>
       <div className='mx-4 md:mx-6 lg:mx-0 flex lg:flex-row flex-col lg:justify-center text-white lg:py-[100px] '>
         <div className='pt-[50px] lg:pt-0 lg:pt-[0px] '>
@@ -90,7 +95,7 @@ const ContactForm = () => {
               <div className='flex lg:flex-row flex-col gap-[25px]'>
                 <div className='flex flex-col justify-center '>
                   <label className='form-label mt-[2.5%]'>
-                    Meno <sup>*</sup>
+                    {content.contactName} <sup>*</sup>
                   </label>
                   <input
                     className='form-control rounded-xl'
@@ -102,7 +107,7 @@ const ContactForm = () => {
                   />
 
                   <label className='form-label mt-[2.5%]'>
-                    Email <sup>*</sup>
+                    {content.contactEmail} <sup>*</sup>
                   </label>
                   <input
                     className='form-control rounded-xl'
@@ -114,7 +119,10 @@ const ContactForm = () => {
                   />
                 </div>
                 <div className='flex flex-col justify-center '>
-                  <label className='form-label mt-[2.5%]'>Predmet</label>
+                  <label className='form-label mt-[2.5%]'>
+                    {' '}
+                    {content.contactSubject}
+                  </label>
                   <input
                     className='form-control rounded-xl'
                     type='text'
@@ -123,7 +131,10 @@ const ContactForm = () => {
                     onChange={(e) => setSubject(e.target.value)}
                   />
 
-                  <label className='form-label mt-[2.5%]'>Telefón</label>
+                  <label className='form-label mt-[2.5%]'>
+                    {' '}
+                    {content.contactPhone}
+                  </label>
                   <input
                     className='form-control rounded-xl'
                     type='text'
@@ -135,7 +146,7 @@ const ContactForm = () => {
               </div>
               <div className='flex flex-col'>
                 <label className='form-label mt-[2.5%]'>
-                  Vaša správa <sup>*</sup>
+                  {content.contactMessage} <sup>*</sup>
                 </label>
                 <textarea
                   className='form-control rounded-xl'
@@ -161,7 +172,7 @@ const ContactForm = () => {
                     className='form-check-label lg:text-[30px] text-[35px] ml-[15px]'
                     htmlFor='flexCheckDefault'
                   >
-                    Súhlasím so spracovaním údajov
+                    {content.contactAgree}
                   </label>
                 </div>
               </div>
@@ -182,7 +193,7 @@ const ContactForm = () => {
                 type='submit'
                 value='Send'
               >
-                Odoslať
+                {content.contactSend}
               </button>
             </form>
           </div>

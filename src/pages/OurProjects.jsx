@@ -34,7 +34,7 @@ const OurProjects = () => {
         </motion.div>
         <h1 className='text-[32.5px] text-center'>
           V našich projektoch používame moderné technológie založené na jazyku
-          Javascript.
+          JavaScript.
         </h1>
         <div className='flex lg:flex-row flex-col items-center justify-center gap-40 '>
           <div className='flex flex-col justify-center items-center'>
