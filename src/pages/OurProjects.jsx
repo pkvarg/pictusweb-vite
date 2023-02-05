@@ -284,7 +284,7 @@ const OurProjects = () => {
           <p className='text-[30px] mt-2'>Node JS</p>
         </div>
         <div className='-mt-60 lg:-mt-40 w-[24rem] md:w-[48rem] lg:w-[90rem]'>
-          <Contact />
+          <Contact language={language} />
         </div>
         <div className='-mt-40'>
           <Footer />
