@@ -21,17 +21,21 @@ function App() {
         {language == 'slovak' && (
           <button
             onClick={() => handleLanguage('english')}
-            className='mr-3 absolute text-white top-[7rem] left-[10px] lg:top-[30px] lg:left-[50%] text-[30px]'
+            className='mr-3 absolute text-white top-[7rem] left-[15px] lg:top-[22.5px] lg:left-[50%] text-[30px]'
           >
-            <img className='w-[120%]' src='/english.png' alt='english' />
+            <img
+              className='w-[14.5%] lg:w-[10.5%]'
+              src='/english.png'
+              alt='english'
+            />
           </button>
         )}
         {language == 'english' && (
           <button
             onClick={() => handleLanguage('slovak')}
-            className='mr-3 absolute text-white top-[7rem] left-[10px] lg:top-[30px] lg:left-[50%] text-[30px]'
+            className='mr-3 absolute text-white top-[7rem] left-[15px] lg:top-[22.5px] lg:left-[50%] text-[30px]'
           >
-            <img className='w-[120%]' src='/slovak.png' alt='slovak' />
+            <img className='w-[18.5%]' src='/slovak.png' alt='slovak' />
           </button>
         )}
       </div>
