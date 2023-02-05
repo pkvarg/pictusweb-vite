@@ -5,12 +5,14 @@ import { ScrollToTop } from './components'
 import './App.css'
 
 function App() {
-  // let lng = JSON.parse(window.localStorage.getItem('language'))
+  //localStorage.clear()
   const [language, setLanguage] = useState('slovak')
+  window.localStorage.setItem('language', JSON.stringify(language))
+  console.log(language)
 
-  const handleLanguage = (language) => {
-    setLanguage(language)
-    window.localStorage.setItem('language', JSON.stringify(language))
+  const handleLanguage = (lng) => {
+    setLanguage(lng)
+    window.localStorage.setItem('language', JSON.stringify(lng))
   }
 
   return (
@@ -19,7 +21,7 @@ function App() {
         {language == 'slovak' && (
           <button
             onClick={() => handleLanguage('english')}
-            className='mr-3 absolute text-white top-[8rem] left-[2rem] lg:top-[30px] lg:left-[50%] text-[30px]'
+            className='mr-3 absolute text-white top-[7rem] left-[10px] lg:top-[30px] lg:left-[50%] text-[30px]'
           >
             <img className='w-[120%]' src='/english.png' alt='english' />
           </button>
@@ -27,12 +29,13 @@ function App() {
         {language == 'english' && (
           <button
             onClick={() => handleLanguage('slovak')}
-            className='mr-3 absolute text-white top-[8rem] left-[2rem] lg:top-[30px] lg:left-[50%] text-[30px]'
+            className='mr-3 absolute text-white top-[7rem] left-[10px] lg:top-[30px] lg:left-[50%] text-[30px]'
           >
             <img className='w-[120%]' src='/slovak.png' alt='slovak' />
           </button>
         )}
       </div>
+      <div className='relative'></div>
       <Routes>
         <Route path='/' element={<Home language={language} />} />
         <Route path='/projects' element={<OurProjects />} />

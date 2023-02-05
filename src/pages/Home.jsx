@@ -9,7 +9,10 @@ import { Footer } from '../components'
 import CookieConsent from 'react-cookie-consent'
 
 const Home = ({ language }) => {
-  // const [language, setLanguage] = useState()
+  //let lng = JSON.parse(window.localStorage.getItem('language'))
+
+  // const [language, setLanguage] = useState(lng)
+  // console.log(language)
   // const callback = (payload) => {
   //   setLanguage(payload)
   // }
@@ -26,6 +29,7 @@ const Home = ({ language }) => {
         <Offer language={language} />
         <Contact language={language} />
         <CookieConsent
+          language={language}
           location='bottom'
           style={{
             background: '#e7e7e8',

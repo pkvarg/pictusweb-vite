@@ -9,13 +9,12 @@ const Hero = ({ language }) => {
   const [content, setContent] = useState({})
 
   useEffect(() => {
-    if (language == 'slovak') {
+    if (language === 'slovak') {
       setContent(Translation.slovak)
-    } else setContent(Translation.english)
+    } else if (language === 'english') {
+      setContent(Translation.english)
+    }
   })
-
-  let tit = []
-  let cht = content.heroTitle1
 
   return (
     <>
@@ -27,23 +26,29 @@ const Hero = ({ language }) => {
           viewport={{ once: false, amount: 0.25 }}
           className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8 lg:py-[100px] py-[50px]`}
         >
-          <div className='flex flex-col justify-left lg:w-[50%]'>
+          <div className='flex flex-col justify-left'>
             <h1 className='text-white text-[7rem]'>
-              {/* <TypingText title={cht} /> */}
-              {content.heroTitle1}
+              {/* {content.heroTitle1} */}
+              <TypingText title={language === 'slovak' ? 'Weby.' : 'Webs.'} />
             </h1>
             <h1 className='text-white text-[70px] mb-[2rem]'>
-              {/* <TypingText title='Eshopy.' /> */}
-              {content.heroTitle2}
+              <TypingText
+                title={language === 'slovak' ? 'Eshopy.' : 'Eshops.'}
+              />
             </h1>
 
             <div className='text-white text-[50px]'>
-              {/* <TitleText title='Moderné technológie.' /> */}
-              {content.heroTitle3}
+              <TitleText
+                title={
+                  language == 'slovak'
+                    ? 'Moderné technológie.'
+                    : 'Modern technologies.'
+                }
+              />
             </div>
           </div>
         </motion.div>
-        <div className='lg:w-[50%]'>
+        <div className='lg:w-[100%]'>
           <img
             className='w-[100%] ml-auto lg:mt-0 mt-[12rem]'
             src='/hero-builders.png'

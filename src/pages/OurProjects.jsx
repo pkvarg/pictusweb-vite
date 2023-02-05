@@ -7,8 +7,8 @@ import Translation from '../components/Languages/Data.json'
 import NavbarProjects from '../components/NavbarProjects'
 
 const OurProjects = () => {
-  let lng = JSON.parse(window.localStorage.getItem('language'))
-  const [language, setLanguage] = useState(lng)
+  let language = JSON.parse(window.localStorage.getItem('language'))
+  // const [language, setLanguage] = useState(lng)
   console.log(language)
   const [content, setContent] = useState({})
 

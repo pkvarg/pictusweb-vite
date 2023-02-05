@@ -7,7 +7,7 @@ const Projects = ({ language }) => {
   const [content, setContent] = useState({})
 
   useEffect(() => {
-    if (language == 'slovak') {
+    if (language === 'slovak') {
       setContent(Translation.slovak)
     } else setContent(Translation.english)
   })

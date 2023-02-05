@@ -6,6 +6,8 @@ import { Link } from 'react-scroll'
 import Translation from '../components/Languages/Data.json'
 
 const Navbar = ({ language }) => {
+  //let lng = JSON.parse(window.localStorage.getItem('language'))
+
   const [content, setContent] = useState({})
 
   useEffect(() => {
@@ -102,14 +104,34 @@ const Navbar = ({ language }) => {
                     {content.navbarContact}
                   </Link>
                 </li>
-                {/* <li>
-                  <a
-                    href='/about'
-                    className='text-[2.5rem] hover:text-dark-red'
-                  >
-                    Info
-                  </a>
-                </li> */}
+
+                <li>
+                  {/* {language == 'slovak' && (
+                    <button
+                      onClick={() => handleLanguage('english')}
+                      className='mr-3 text-white text-[30px]'
+                    >
+                      <img
+                        className='w-[120%]'
+                        src='/english.png'
+                        alt='english'
+                      />
+                    </button>
+                  )}
+                  {language == 'english' && (
+                    <button
+                      value='slovak'
+                      onClick={() => handleLanguage('slovak')}
+                      className='mr-3 text-[30px]'
+                    >
+                      <img
+                        className='w-[120%]'
+                        src='/slovak.png'
+                        alt='slovak'
+                      />
+                    </button>
+                  )} */}
+                </li>
               </ul>
             </div>
           </div>
