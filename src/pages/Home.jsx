@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../sections/Hero'
 import Services from '../sections/Services'
@@ -7,15 +7,20 @@ import Offer from '../sections/Offer'
 import Contact from '../sections/Contact'
 import { Footer } from '../components'
 import CookieConsent from 'react-cookie-consent'
+import Translation from '../components/Languages/Data.json'
 
 const Home = ({ language }) => {
-  //let lng = JSON.parse(window.localStorage.getItem('language'))
+  const [content, setContent] = useState({})
 
-  // const [language, setLanguage] = useState(lng)
-  // console.log(language)
-  // const callback = (payload) => {
-  //   setLanguage(payload)
-  // }
+  useEffect(() => {
+    if (language === 'slovak') {
+      setContent(Translation.slovak)
+    } else if (language === 'english') {
+      setContent(Translation.english)
+    } else if (language === 'romanian') {
+      setContent(Translation.romanian)
+    }
+  })
   return (
     <>
       <div className='hero-gradient'>
@@ -42,7 +47,7 @@ const Home = ({ language }) => {
             color: '#fff',
             fontSize: '22.5px',
           }}
-          buttonText='Súhlasím'
+          buttonText='OK'
           expires={365}
           enableDeclineButton
           onDecline={() => {
@@ -53,10 +58,15 @@ const Home = ({ language }) => {
             color: '#fff',
             fontSize: '22.5px',
           }}
-          declineButtonText='Nesúhlasím'
+          declineButtonText={
+            language === 'romanian'
+              ? 'Nu sunt de acord'
+              : language === 'slovak'
+              ? 'Nesúhlasím'
+              : `Don't agree`
+          }
         >
-          Táto stránka používa len analytické a pre fungovanie webu nevyhnutné
-          cookies. Nepoužívame funkčné ani marketingové cookies.{' '}
+          {content.cookies}
         </CookieConsent>
 
         <Footer />
