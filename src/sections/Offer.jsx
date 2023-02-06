@@ -8,7 +8,11 @@ const Offer = ({ language }) => {
   useEffect(() => {
     if (language === 'slovak') {
       setContent(Translation.slovak)
-    } else setContent(Translation.english)
+    } else if (language === 'english') {
+      setContent(Translation.english)
+    } else if (language === 'romanian') {
+      setContent(Translation.romanian)
+    }
   })
 
   const navigate = useNavigate()

@@ -9,9 +9,13 @@ const Navbar = ({ language }) => {
   const [content, setContent] = useState({})
 
   useEffect(() => {
-    if (language == 'slovak') {
+    if (language === 'slovak') {
       setContent(Translation.slovak)
-    } else setContent(Translation.english)
+    } else if (language === 'english') {
+      setContent(Translation.english)
+    } else if (language === 'romanian') {
+      setContent(Translation.romanian)
+    }
   })
   const [navbar, setNavbar] = useState(false)
 
@@ -62,7 +66,7 @@ const Navbar = ({ language }) => {
               </div>
             </div>
           </div>
-          <div className='sm:w-[65%] lg:w-[50%]'>
+          <div>
             <div
               className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
                 navbar ? 'block' : 'hidden'

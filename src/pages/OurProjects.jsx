@@ -7,24 +7,21 @@ import Translation from '../components/Languages/Data.json'
 import NavbarProjects from '../components/NavbarProjects'
 
 const OurProjects = ({ language }) => {
-  //let language = JSON.parse(window.localStorage.getItem('language'))
+  //localStorage.clear()
+  // let lng = JSON.parse(window.localStorage.getItem('language'))
   // const [language, setLanguage] = useState(lng)
-  // console.log(language)
+  console.log(language)
   const [content, setContent] = useState({})
   // let language = ''
-  let data = JSON.parse(window.localStorage.getItem('language'))
 
   useEffect(() => {
-    // if (data === 'slovak') {
-    //   language = 'english'
-    // } else {
-    //   language = 'slovak'
-    // }
-    //language = data
-    console.log(language)
     if (language === 'slovak') {
       setContent(Translation.slovak)
-    } else setContent(Translation.english)
+    } else if (language === 'english') {
+      setContent(Translation.english)
+    } else if (language === 'romanian') {
+      setContent(Translation.romanian)
+    }
   })
 
   useLayoutEffect(() => {

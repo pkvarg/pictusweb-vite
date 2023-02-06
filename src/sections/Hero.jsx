@@ -7,12 +7,13 @@ import Translation from '../components/Languages/Data.json'
 
 const Hero = ({ language }) => {
   const [content, setContent] = useState({})
-
   useEffect(() => {
     if (language === 'slovak') {
       setContent(Translation.slovak)
     } else if (language === 'english') {
       setContent(Translation.english)
+    } else if (language === 'romanian') {
+      setContent(Translation.romanian)
     }
   })
 
@@ -28,19 +29,34 @@ const Hero = ({ language }) => {
         >
           <div className='flex flex-col justify-left'>
             <h1 className='text-white text-[7rem]'>
-              {/* {content.heroTitle1} */}
-              <TypingText title={language === 'slovak' ? 'Weby.' : 'Webs.'} />
+              <TypingText
+                title={
+                  language === 'romanian'
+                    ? 'Webs'
+                    : language === 'slovak'
+                    ? 'Weby.'
+                    : 'Webs.'
+                }
+              />
             </h1>
             <h1 className='text-white text-[70px] mb-[2rem]'>
               <TypingText
-                title={language === 'slovak' ? 'Eshopy.' : 'Eshops.'}
+                title={
+                  language === 'romanian'
+                    ? 'Eshops'
+                    : language === 'slovak'
+                    ? 'Eshopy.'
+                    : 'Eshop.'
+                }
               />
             </h1>
 
             <div className='text-white text-[50px]'>
               <TitleText
                 title={
-                  language == 'slovak'
+                  language === 'romanian'
+                    ? 'Tehnologii moderne.'
+                    : language === 'slovak'
                     ? 'Moderné technológie.'
                     : 'Modern technologies.'
                 }

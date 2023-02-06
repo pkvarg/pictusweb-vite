@@ -7,9 +7,13 @@ const ContactForm = ({ language }) => {
   const [content, setContent] = useState({})
 
   useEffect(() => {
-    if (language == 'slovak') {
+    if (language === 'slovak') {
       setContent(Translation.slovak)
-    } else setContent(Translation.english)
+    } else if (language === 'english') {
+      setContent(Translation.english)
+    } else if (language === 'romanian') {
+      setContent(Translation.romanian)
+    }
   })
   const [message, setMessage] = useState(null)
   const [messageSuccess, setMessageSuccess] = useState(null)

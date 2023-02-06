@@ -6,10 +6,15 @@ const Services = ({ language }) => {
   const [content, setContent] = useState({})
 
   useEffect(() => {
-    if (language == 'slovak') {
+    if (language === 'slovak') {
       setContent(Translation.slovak)
-    } else setContent(Translation.english)
+    } else if (language === 'english') {
+      setContent(Translation.english)
+    } else if (language === 'romanian') {
+      setContent(Translation.romanian)
+    }
   })
+
   return (
     <div className='text-white lg:pb-[120px]'>
       <div className='lg:border border-white border-3 rounded-[15px] mt-[120px] lg:max-w-[75%] mx-auto'>
