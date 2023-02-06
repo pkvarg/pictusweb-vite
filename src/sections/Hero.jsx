@@ -46,7 +46,7 @@ const Hero = ({ language }) => {
                     ? 'Eshops'
                     : language === 'slovak'
                     ? 'Eshopy.'
-                    : 'Eshop.'
+                    : 'Eshops.'
                 }
               />
             </h1>
@@ -55,7 +55,7 @@ const Hero = ({ language }) => {
               <TitleText
                 title={
                   language === 'romanian'
-                    ? 'Tehnologii moderne.'
+                    ? 'Tehnologii moderne'
                     : language === 'slovak'
                     ? 'Moderné technológie.'
                     : 'Modern technologies.'
