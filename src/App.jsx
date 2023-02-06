@@ -8,7 +8,6 @@ function App() {
   //localStorage.clear()
   const [language, setLanguage] = useState('slovak')
   window.localStorage.setItem('language', JSON.stringify(language))
-  console.log(language)
 
   const handleLanguage = (lng) => {
     setLanguage(lng)
@@ -24,7 +23,7 @@ function App() {
             className='mr-3 absolute text-white top-[7rem] left-[15px] lg:top-[22.5px] lg:left-[50%] text-[30px]'
           >
             <img
-              className='w-[14.5%] lg:w-[10.5%]'
+              className='w-[14.5%] lg:w-[3rem]'
               src='/english.png'
               alt='english'
             />
@@ -35,14 +34,18 @@ function App() {
             onClick={() => handleLanguage('slovak')}
             className='mr-3 absolute text-white top-[7rem] left-[15px] lg:top-[22.5px] lg:left-[50%] text-[30px]'
           >
-            <img className='w-[18.5%]' src='/slovak.png' alt='slovak' />
+            <img
+              className='w-[18.5%] lg:w-[3.25rem]'
+              src='/slovak.png'
+              alt='slovak'
+            />
           </button>
         )}
       </div>
       <div className='relative'></div>
       <Routes>
         <Route path='/' element={<Home language={language} />} />
-        <Route path='/projects' element={<OurProjects />} />
+        <Route path='/projects' element={<OurProjects language={language} />} />
         <Route path='/about' element={<About />} />
         <Route path='/gdpr' element={<Gdpr />} />
         <Route path='/trade-rules' element={<TradeRules />} />
