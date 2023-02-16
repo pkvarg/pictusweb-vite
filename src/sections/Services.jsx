@@ -29,7 +29,7 @@ const Services = ({ language }) => {
             transition={{ duration: 5 }}
           >
             <div className='lg:w-[35rem] ml-[5%]'>
-              <img className='lg:w-[90%]' src='/design.png' alt='services' />
+              <img className='lg:w-[90%]' src='/design.webp' alt='services' />
             </div>
           </motion.div>
 
@@ -37,7 +37,7 @@ const Services = ({ language }) => {
             <div className='flex flex-row items-center gap-3'>
               <img
                 className='lg:w-[5%] lg:flex hidden'
-                src='/service-check.png'
+                src='/service-check.webp'
                 alt='service'
               />
               <h3 className='text-[2.5rem] mt-[18px]'>
@@ -50,7 +50,7 @@ const Services = ({ language }) => {
             <div className='flex flex-row items-center gap-3'>
               <img
                 className='lg:w-[5%] lg:flex hidden'
-                src='/service-check.png'
+                src='/service-check.webp'
                 alt='service'
               />
               <h3 className='text-[2.5rem] mt-[18px]'>
@@ -70,7 +70,7 @@ const Services = ({ language }) => {
             <div className='flex flex-row items-center gap-3'>
               <img
                 className='lg:w-[5%] lg:flex hidden'
-                src='/service-check.png'
+                src='/service-check.webp'
                 alt='service'
               />
               <h3 className='text-[2.5rem] mt-[18px]'>
@@ -84,7 +84,7 @@ const Services = ({ language }) => {
             <div className='flex flex-row items-center gap-3'>
               <img
                 className='lg:w-[5%] lg:flex hidden'
-                src='/service-check.png'
+                src='/service-check.webp'
                 alt='service'
               />
               <h3 className='text-[2.5rem] mt-[18px]'>
@@ -105,7 +105,7 @@ const Services = ({ language }) => {
             <div className='lg:w-[35rem] lg:ml-[14.5%]'>
               <img
                 className='lg:w-[75%] lg:mt-0 mt-20'
-                src='/server.png'
+                src='/server.webp'
                 alt='server'
               />
             </div>

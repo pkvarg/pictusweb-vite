@@ -23,7 +23,7 @@ function App() {
         >
           <img
             className='w-[3rem] lg:w-[3rem]'
-            src='/english.png'
+            src='/english.webp'
             alt='english'
           />
         </button>
@@ -34,7 +34,7 @@ function App() {
         >
           <img
             className='w-[3rem] lg:w-[3rem]'
-            src='/slovak.png'
+            src='/slovak.webp'
             alt='slovak'
           />
         </button>
@@ -44,7 +44,7 @@ function App() {
         >
           <img
             className='w-[3rem] lg:w-[3rem]'
-            src='/romanian.png'
+            src='/romanian.webp'
             alt='romanian'
           />
         </button>

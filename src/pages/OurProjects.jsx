@@ -46,7 +46,7 @@ const OurProjects = ({ language }) => {
         >
           <img
             className='hidden md:flex lg:w-[75%]  h-auto'
-            src='/js-web.png'
+            src='/js-web.webp'
             alt='js-web-development'
           />
         </motion.div>
@@ -56,7 +56,7 @@ const OurProjects = ({ language }) => {
             <h2 className='text-[30px]'>{content.ourProjectsWebDesc1}</h2>
             <h3 className='text-[25px]'>{content.ourProjectsWebDesc2}</h3>
             <a href='https://github.com/pkvarg/ioana-vite' target='_blank'>
-              <img className='mt-10' src='/git-hub-green.png' alt='git-hub' />
+              <img className='mt-10' src='/git-hub-green.webp' alt='git-hub' />
             </a>
           </div>
           <motion.div
@@ -69,7 +69,7 @@ const OurProjects = ({ language }) => {
             <a href='https://ioana-illustrations.eu' target='_blank'>
               <img
                 className='w-[40rem]'
-                src='/ioana-page.png'
+                src='/ioana-page.webp'
                 alt='ioana-illustrations.eu'
               />
             </a>
@@ -141,7 +141,7 @@ const OurProjects = ({ language }) => {
           <p className='text-[30px] mt-2'>React</p>
           <img
             className='w-[12.5%] lg:w-[4%]'
-            src='/tailwind.png'
+            src='/tailwind.webp'
             alt='tailwind-css'
           />
           <p className='text-[30px] mt-2'>Tailwind css</p>
@@ -157,7 +157,7 @@ const OurProjects = ({ language }) => {
             <a href='https://kvalitnamontaz.sk' target='_blank'>
               <img
                 className='w-[40rem]'
-                src='/dvl-page.png'
+                src='/dvl-page.webp'
                 alt='kvalitnamontaz.sk'
               />
             </a>
@@ -166,7 +166,7 @@ const OurProjects = ({ language }) => {
             <h2 className='text-[30px]'>{content.ourProjectsWebDesc1}</h2>
             <h3 className='text-[25px]'>{content.ourProjectsWebDesc2}</h3>
             <a href='https://github.com/pkvarg/vite-dvl' target='_blank'>
-              <img className='mt-10' src='/git-hub-green.png' alt='git-hub' />
+              <img className='mt-10' src='/git-hub-green.webp' alt='git-hub' />
             </a>
           </div>
         </div>
@@ -236,7 +236,7 @@ const OurProjects = ({ language }) => {
           <p className='text-[30px] mt-2'>React</p>
           <img
             className='w-[15%] lg:w-[4%]'
-            src='/bootstrap.png'
+            src='/bootstrap.webp'
             alt='tailwind-css'
           />
           <p className='text-[30px] mt-2'>Bootstrap 5</p>
@@ -246,7 +246,7 @@ const OurProjects = ({ language }) => {
             <h2 className='text-[30px]'>{content.ourProjectsEshopDesc}</h2>
             <h3 className='text-[25px]'>{content.ourProjectsWebDesc2}</h3>
             <a href='https://github.com/pkvarg/prud' target='_blank'>
-              <img className='mt-10' src='/git-hub-green.png' alt='git-hub' />
+              <img className='mt-10' src='/git-hub-green.webp' alt='git-hub' />
             </a>
           </div>
           <motion.div
@@ -257,7 +257,7 @@ const OurProjects = ({ language }) => {
             className='flex justify-center'
           >
             <a href='https://pictusweb.art' target='_blank'>
-              <img className='w-[40rem]' src='/prud-page.png' alt='prud.sk' />
+              <img className='w-[40rem]' src='/prud-page.webp' alt='prud.sk' />
             </a>
           </motion.div>
         </div>
@@ -270,21 +270,21 @@ const OurProjects = ({ language }) => {
 
           <img
             className='w-[35%] lg:w-[3.5%]'
-            src='/mongo.png'
+            src='/mongo.webp'
             alt='mongo-db'
           />
           <p className='text-[30px] mt-2'> Mongo DB</p>
           <img
             className='w-[40%] lg:w-[4%]'
-            src='/express.png'
+            src='/express.webp'
             alt='mongo-db'
           />
           <p className='text-[30px] mt-2'> Express</p>
-          <img className='w-[35%] lg:w-[3.5%]' src='/react.png' alt='react' />
+          <img className='w-[35%] lg:w-[3.5%]' src='/react.webp' alt='react' />
           <p className='text-[30px] mt-2'>React</p>
           <img
             className='w-[35%] lg:w-[3.5%]'
-            src='/node.png'
+            src='/node.webp'
             alt='tailwind-css'
           />
           <p className='text-[30px] mt-2'>Node JS</p>

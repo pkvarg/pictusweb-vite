@@ -67,7 +67,7 @@ const Hero = ({ language }) => {
         <div className='lg:w-[100%]'>
           <img
             className='w-[100%] ml-auto lg:mt-0 mt-[12rem]'
-            src='/hero-builders.png'
+            src='/hero-builders.webp'
             alt='hero'
           />
         </div>

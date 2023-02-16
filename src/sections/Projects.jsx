@@ -34,7 +34,7 @@ const Projects = ({ language }) => {
           <div className='flex flex-col gap-3'>
             <img
               className='w-[100rem] rounded-xl'
-              src='/ioana-page.png'
+              src='/ioana-page.webp'
               alt='ioana-illustrations.eu'
             />
             <h3 className='text-[35px] text-center'>ioana-illustrations.eu</h3>
@@ -42,7 +42,7 @@ const Projects = ({ language }) => {
           <div className='flex flex-col gap-3'>
             <img
               className='w-[100rem] rounded-xl'
-              src='/dvl-page.png'
+              src='/dvl-page.webp'
               alt='kvalitnamontaz.eu'
             />
             <h3 className='text-[35px] text-center'>kvalitnamontaz.sk</h3>
@@ -50,7 +50,7 @@ const Projects = ({ language }) => {
           <div className='flex flex-col gap-3'>
             <img
               className='w-[100rem] rounded-xl'
-              src='/prud-page.png'
+              src='/prud-page.webp'
               alt='prud.sk'
             />
             <h3 className='text-[35px] text-center'>prud.sk</h3>

@@ -117,7 +117,7 @@ const Navbar = ({ language }) => {
                     >
                       <img
                         className='w-[120%]'
-                        src='/english.png'
+                        src='/english.webp'
                         alt='english'
                       />
                     </button>
@@ -130,7 +130,7 @@ const Navbar = ({ language }) => {
                     >
                       <img
                         className='w-[120%]'
-                        src='/slovak.png'
+                        src='/slovak.webp'
                         alt='slovak'
                       />
                     </button>
