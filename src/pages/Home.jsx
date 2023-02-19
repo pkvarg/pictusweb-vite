@@ -8,8 +8,10 @@ import Contact from '../sections/Contact'
 import { Footer } from '../components'
 import CookieConsent from 'react-cookie-consent'
 import Translation from '../components/Languages/Data.json'
+import { useStateContext } from '../context/StateContext'
 
-const Home = ({ language }) => {
+const Home = () => {
+  const { language, setLanguage } = useStateContext()
   const [content, setContent] = useState({})
 
   useEffect(() => {

@@ -1,18 +1,16 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react'
 import Footer from '../components/Footer'
 import Contact from '../sections/Contact'
-import { calcLength, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Translation from '../components/Languages/Data.json'
 
 import NavbarProjects from '../components/NavbarProjects'
+import { useStateContext } from '../context/StateContext'
 
-const OurProjects = ({ language }) => {
-  //localStorage.clear()
-  // let lng = JSON.parse(window.localStorage.getItem('language'))
-  // const [language, setLanguage] = useState(lng)
-  console.log(language)
+const OurProjects = () => {
+  const { language, setLanguage } = useStateContext()
+
   const [content, setContent] = useState({})
-  // let language = ''
 
   useEffect(() => {
     if (language === 'slovak') {

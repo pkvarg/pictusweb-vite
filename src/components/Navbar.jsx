@@ -4,9 +4,15 @@ import { navVariants } from './../motion'
 import styles from '../styles'
 import { Link } from 'react-scroll'
 import Translation from '../components/Languages/Data.json'
+import { useStateContext } from '../context/StateContext'
+import LanguageBar from './LanguageBar'
 
-const Navbar = ({ language }) => {
-  //let lng = JSON.parse(window.localStorage.getItem('language'))
+const Navbar = () => {
+  const { language, setLanguage } = useStateContext()
+
+  const handleLanguage = (lang) => {
+    setLanguage(lang)
+  }
 
   const [content, setContent] = useState({})
 
@@ -140,7 +146,41 @@ const Navbar = ({ language }) => {
             </div>
           </div>
         </div>
+        <LanguageBar />
       </nav>
+      {/* <div className='relative'>
+        <button
+          onClick={() => handleLanguage('english')}
+          className='mr-3 absolute text-white top-[0rem] left-[1rem] lg:top-[-65px] lg:left-[45%] text-[30px]'
+        >
+          <img
+            className='w-[3rem] lg:w-[3rem]'
+            src='/english.webp'
+            alt='english'
+          />
+        </button>
+
+        <button
+          onClick={() => handleLanguage('slovak')}
+          className='mr-3 absolute text-white top-[0rem] left-[6rem] lg:top-[-65px] lg:left-[50%] text-[30px]'
+        >
+          <img
+            className='w-[3rem] lg:w-[3rem]'
+            src='/slovak.webp'
+            alt='slovak'
+          />
+        </button>
+        <button
+          onClick={() => handleLanguage('romanian')}
+          className='mr-3 absolute text-white top-[0rem] left-[11rem] lg:top-[-65px] lg:left-[55%] text-[30px]'
+        >
+          <img
+            className='w-[3rem] lg:w-[3rem]'
+            src='/romanian.webp'
+            alt='romanian'
+          />
+        </button>
+      </div> */}
     </>
   )
 }

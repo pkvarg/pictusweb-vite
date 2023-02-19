@@ -4,8 +4,11 @@ import { navVariants } from './../motion'
 import styles from '../styles'
 import { Link } from 'react-scroll'
 import Translation from '../components/Languages/Data.json'
+import LanguageBar from './LanguageBar'
+import { useStateContext } from '../context/StateContext'
 
-const Navbar = ({ language }) => {
+const Navbar = () => {
+  const { language, setLanguage } = useStateContext()
   const [content, setContent] = useState({})
 
   useEffect(() => {
@@ -106,6 +109,7 @@ const Navbar = ({ language }) => {
             </div>
           </div>
         </div>
+        <LanguageBar />
       </nav>
     </>
   )
