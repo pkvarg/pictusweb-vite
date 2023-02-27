@@ -2,8 +2,10 @@ import React, { useRef, useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import Message from '../components/Message'
 import Translation from '../components/Languages/Data.json'
+import { useStateContext } from '../context/StateContext'
 
 const ContactForm = ({ language }) => {
+  const { botsCount, setBotsCount } = useStateContext()
   const [content, setContent] = useState({})
 
   useEffect(() => {
@@ -43,6 +45,7 @@ const ContactForm = ({ language }) => {
       setEmail('')
       setPhone('')
       setMailMessage('')
+
       const element = document.getElementById('contact')
       element.scrollIntoView({ behavior: 'smooth' })
     } else {

@@ -3,6 +3,7 @@ const Context = createContext()
 
 export const StateContext = ({ children }) => {
   const [language, setLanguage] = useState('slovak')
+  const [botsCount, setBotsCount] = useState(0)
 
   useEffect(() => {
     const LocalStorageLanguage = window.localStorage.getItem('language')
@@ -14,10 +15,10 @@ export const StateContext = ({ children }) => {
     window.localStorage.setItem('language', JSON.stringify(language))
   }, [language])
 
-  console.log(language)
-
   return (
-    <Context.Provider value={{ language, setLanguage }}>
+    <Context.Provider
+      value={{ language, setLanguage, botsCount, setBotsCount }}
+    >
       {children}
     </Context.Provider>
   )

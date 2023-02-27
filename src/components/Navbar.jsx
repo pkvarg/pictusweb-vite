@@ -114,6 +114,9 @@ const Navbar = () => {
                     {content.navbarContact}
                   </Link>
                 </li>
+                {/* <li>
+                  <a href='/counter'>Counter</a>
+                </li> */}
 
                 <li>
                   {/* {language == 'slovak' && (

@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Message = ({ variant, children }) => {
-  console.log(variant)
   return (
     <>
       {variant === 'danger' ? (

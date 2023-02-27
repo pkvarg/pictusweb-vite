@@ -11,7 +11,7 @@ import Translation from '../components/Languages/Data.json'
 import { useStateContext } from '../context/StateContext'
 
 const Home = () => {
-  const { language, setLanguage } = useStateContext()
+  const { language, setLanguage, botsCount, setBotsCount } = useStateContext()
   const [content, setContent] = useState({})
 
   useEffect(() => {
