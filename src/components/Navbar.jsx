@@ -80,7 +80,7 @@ const Navbar = () => {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul className='items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'>
+              <ul className='justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'>
                 <li>
                   <Link
                     to='offer'
@@ -119,71 +119,13 @@ const Navbar = () => {
                 </li> */}
 
                 <li>
-                  {/* {language == 'slovak' && (
-                    <button
-                      onClick={() => handleLanguage('english')}
-                      className='mr-3 text-white text-[30px]'
-                    >
-                      <img
-                        className='w-[120%]'
-                        src='/english.webp'
-                        alt='english'
-                      />
-                    </button>
-                  )}
-                  {language == 'english' && (
-                    <button
-                      value='slovak'
-                      onClick={() => handleLanguage('slovak')}
-                      className='mr-3 text-[30px]'
-                    >
-                      <img
-                        className='w-[120%]'
-                        src='/slovak.webp'
-                        alt='slovak'
-                      />
-                    </button>
-                  )} */}
+                  <LanguageBar />
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <LanguageBar />
       </nav>
-      {/* <div className='relative'>
-        <button
-          onClick={() => handleLanguage('english')}
-          className='mr-3 absolute text-white top-[0rem] left-[1rem] lg:top-[-65px] lg:left-[45%] text-[30px]'
-        >
-          <img
-            className='w-[3rem] lg:w-[3rem]'
-            src='/english.webp'
-            alt='english'
-          />
-        </button>
-
-        <button
-          onClick={() => handleLanguage('slovak')}
-          className='mr-3 absolute text-white top-[0rem] left-[6rem] lg:top-[-65px] lg:left-[50%] text-[30px]'
-        >
-          <img
-            className='w-[3rem] lg:w-[3rem]'
-            src='/slovak.webp'
-            alt='slovak'
-          />
-        </button>
-        <button
-          onClick={() => handleLanguage('romanian')}
-          className='mr-3 absolute text-white top-[0rem] left-[11rem] lg:top-[-65px] lg:left-[55%] text-[30px]'
-        >
-          <img
-            className='w-[3rem] lg:w-[3rem]'
-            src='/romanian.webp'
-            alt='romanian'
-          />
-        </button>
-      </div> */}
     </>
   )
 }
