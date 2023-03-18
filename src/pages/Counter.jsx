@@ -9,7 +9,9 @@ const Counter = () => {
     <>
       <div className='second-gradient text-white h-[100vh]'>
         <Navbar />
-        <div className='p-8'>Bots unsuccessful: {botsCount}</div>
+        <div className='p-8' id='counter'>
+          Bots unsuccessful:
+        </div>
       </div>
     </>
   )

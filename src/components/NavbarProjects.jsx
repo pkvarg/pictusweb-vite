@@ -105,11 +105,13 @@ const Navbar = () => {
                     {content.navbarContact}
                   </Link>
                 </li>
+                <li className='-translate-y-[27.5%]'>
+                  <LanguageBar />
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        <LanguageBar />
       </nav>
     </>
   )

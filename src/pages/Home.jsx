@@ -9,10 +9,21 @@ import { Footer } from '../components'
 import CookieConsent from 'react-cookie-consent'
 import Translation from '../components/Languages/Data.json'
 import { useStateContext } from '../context/StateContext'
+import ReactGA from 'react-ga'
+// const TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID
+// ReactGA.initialize(TRACKING_ID)
 
 const Home = () => {
   const { language, setLanguage, botsCount, setBotsCount } = useStateContext()
   const [content, setContent] = useState({})
+  const [cookieAccept, setCookieAccept] = useState(false)
+
+  const TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID
+
+  // useEffect(() => {
+  //   ReactGA.initialize(TRACKING_ID)
+  //   ReactGA.pageview('/')
+  // }, [])
 
   useEffect(() => {
     if (language === 'slovak') {
@@ -23,6 +34,18 @@ const Home = () => {
       setContent(Translation.romanian)
     }
   })
+
+  // useEffect(() => {
+  //   if (cookieAccept) {
+  //     console.log(TRACKING_ID)
+  //   }
+  //   ReactGA.initialize(TRACKING_ID)
+
+  //   ReactGA.pageview(window.location.pathname + window.location.search)
+  // }, [cookieAccept])
+
+  // console.log('cookies:', cookieAccept)
+
   return (
     <>
       <div className='hero-gradient'>
@@ -54,6 +77,7 @@ const Home = () => {
           enableDeclineButton
           onDecline={() => {
             console.log('nay!')
+            setCookieAccept(false)
           }}
           declineButtonStyle={{
             background: 'red',
@@ -67,6 +91,9 @@ const Home = () => {
               ? 'Nesúhlasím'
               : `Don't agree`
           }
+          onAccept={() => {
+            setCookieAccept(true)
+          }}
         >
           {content.cookies}
         </CookieConsent>
