@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser'
 import Message from '../components/Message'
 import Translation from '../components/Languages/Data.json'
 import { useStateContext } from '../context/StateContext'
+import axios from 'axios'
 
 const ContactForm = ({ language }) => {
   const { botsCount, setBotsCount } = useStateContext()
@@ -35,6 +36,23 @@ const ContactForm = ({ language }) => {
   const y = import.meta.env.VITE_EMAIL_EXTRA_TWO
   const [passwordGroupOne, setPasswordGroupOne] = useState(x)
   const [passwordGroupTwo, setPasswordGroupTwo] = useState(y)
+
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }
+
+  const increaseBots = async () => {
+    const { data } = await axios.post(
+      `http://localhost:1000/api/bots/increase`,
+
+      config
+    )
+    console.log(data)
+    setBotsCount(data)
+  }
+
   const sendEmail = (e) => {
     e.preventDefault()
 
@@ -45,6 +63,7 @@ const ContactForm = ({ language }) => {
       setEmail('')
       setPhone('')
       setMailMessage('')
+      increaseBots()
 
       const element = document.getElementById('contact')
       element.scrollIntoView({ behavior: 'smooth' })

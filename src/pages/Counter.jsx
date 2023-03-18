@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/NavbarProjects'
 import axios from 'axios'
 
 const Counter = () => {
-  const [count, setCount] = useState()
+  const [count, setCount] = useState(0)
 
   const config = {
     headers: {
@@ -21,17 +21,6 @@ const Counter = () => {
   }
   getBots()
 
-  // increase
-  const increaseBots = async () => {
-    const { data } = await axios.post(
-      `http://localhost:1000/api/bots/increase`,
-
-      config
-    )
-    console.log(data)
-    setCount(data)
-  }
-
   return (
     <>
       <div className='second-gradient text-white h-[100vh]'>
@@ -39,7 +28,6 @@ const Counter = () => {
         <div className='p-8' id='counter'>
           Bots unsuccessful: {count}
         </div>
-        <button onClick={() => increaseBots()}>INC +1</button>
       </div>
     </>
   )
