@@ -16,7 +16,6 @@ const Counter = () => {
 
       config
     )
-    console.log(data)
     setCount(data)
   }
   getBots()

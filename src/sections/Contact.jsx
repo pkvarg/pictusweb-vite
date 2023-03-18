@@ -44,12 +44,11 @@ const ContactForm = ({ language }) => {
   }
 
   const increaseBots = async () => {
-    const { data } = await axios.post(
+    const { data } = await axios.put(
       `http://localhost:1000/api/bots/increase`,
 
       config
     )
-    console.log(data)
     setBotsCount(data)
   }
 
