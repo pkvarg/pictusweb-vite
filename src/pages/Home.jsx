@@ -9,21 +9,54 @@ import { Footer } from '../components'
 import CookieConsent from 'react-cookie-consent'
 import Translation from '../components/Languages/Data.json'
 import { useStateContext } from '../context/StateContext'
-// import ReactGA from 'react-ga'
-// const TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID
-// ReactGA.initialize(TRACKING_ID)
+import { initializeApp } from 'firebase/app'
+import { getAnalytics } from 'firebase/analytics'
+import axios from 'axios'
+
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_APIKEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+}
 
 const Home = () => {
-  const { language, setLanguage, botsCount, setBotsCount } = useStateContext()
+  const { language } = useStateContext()
   const [content, setContent] = useState({})
   const [cookieAccept, setCookieAccept] = useState(false)
 
-  const TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }
 
-  // useEffect(() => {
-  //   ReactGA.initialize(TRACKING_ID)
-  //   ReactGA.pageview('/')
-  // }, [])
+  const increaseVisitorsDeclined = async () => {
+    const { data } = await axios.put(
+      // `https://pictusweb.online/api/visitors/pic/increase`,
+      `http://localhost:2000/api/visitors/pic/increase`,
+      config
+    )
+    console.log('vstrsDec:', data.visitorsDeclined)
+  }
+
+  const increaseVisitorsAgreed = async () => {
+    const { data } = await axios.put(
+      // `https://pictusweb.online/api/visitors/pic/agree/increase`,
+      `http://localhost:2000/api/visitors/pic/agree/increase`,
+      config
+    )
+    console.log('vstrsAgr:', data.visitorsAgreed)
+  }
+
+  // Initialize Firebase
+  if (cookieAccept) {
+    const app = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(app)
+  }
 
   useEffect(() => {
     if (language === 'slovak') {
@@ -34,17 +67,6 @@ const Home = () => {
       setContent(Translation.romanian)
     }
   })
-
-  // useEffect(() => {
-  //   if (cookieAccept) {
-  //     console.log(TRACKING_ID)
-  //   }
-  //   ReactGA.initialize(TRACKING_ID)
-
-  //   ReactGA.pageview(window.location.pathname + window.location.search)
-  // }, [cookieAccept])
-
-  // console.log('cookies:', cookieAccept)
 
   return (
     <>
@@ -76,8 +98,8 @@ const Home = () => {
           expires={365}
           enableDeclineButton
           onDecline={() => {
-            console.log('nay!')
             setCookieAccept(false)
+            increaseVisitorsDeclined()
           }}
           declineButtonStyle={{
             background: 'red',
@@ -93,6 +115,7 @@ const Home = () => {
           }
           onAccept={() => {
             setCookieAccept(true)
+            increaseVisitorsAgreed()
           }}
         >
           {content.cookies}

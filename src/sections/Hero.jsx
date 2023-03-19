@@ -32,7 +32,7 @@ const Hero = ({ language }) => {
               <TypingText
                 title={
                   language === 'romanian'
-                    ? 'Webs'
+                    ? 'Webs.'
                     : language === 'slovak'
                     ? 'Weby.'
                     : 'Webs.'
@@ -43,7 +43,7 @@ const Hero = ({ language }) => {
               <TypingText
                 title={
                   language === 'romanian'
-                    ? 'Eshops'
+                    ? 'Eshops.'
                     : language === 'slovak'
                     ? 'Eshopy.'
                     : 'Eshops.'
@@ -55,7 +55,7 @@ const Hero = ({ language }) => {
               <TitleText
                 title={
                   language === 'romanian'
-                    ? 'Tehnologii moderne'
+                    ? 'Tehnologii moderne.'
                     : language === 'slovak'
                     ? 'Moderné technológie.'
                     : 'Modern technologies.'
