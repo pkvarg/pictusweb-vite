@@ -9,7 +9,7 @@ import { Footer } from '../components'
 import CookieConsent from 'react-cookie-consent'
 import Translation from '../components/Languages/Data.json'
 import { useStateContext } from '../context/StateContext'
-import ReactGA from 'react-ga'
+// import ReactGA from 'react-ga'
 // const TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID
 // ReactGA.initialize(TRACKING_ID)
 
