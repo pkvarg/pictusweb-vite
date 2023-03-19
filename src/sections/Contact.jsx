@@ -46,10 +46,12 @@ const ContactForm = ({ language }) => {
   const increaseBots = async () => {
     const { data } = await axios.put(
       `https://pictusweb.online/api/bots/increase`,
+      // `http://localhost:2000/api/bots/increase`,
 
       config
     )
     setBotsCount(data)
+    console.log('ctc:', data)
   }
 
   const sendEmail = (e) => {

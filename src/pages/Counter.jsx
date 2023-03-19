@@ -13,10 +13,12 @@ const Counter = () => {
   const getBots = async () => {
     const { data } = await axios.get(
       `https://pictusweb.online/api/bots/counter`,
+      // `http://localhost:2000/api/bots/counter`,
 
       config
     )
     setCount(data)
+    console.log('cnt:', data)
   }
   getBots()
 
