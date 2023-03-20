@@ -36,8 +36,8 @@ const Home = () => {
 
   const increaseVisitorsDeclined = async () => {
     const { data } = await axios.put(
-      // `https://pictusweb.online/api/visitors/pic/increase`,
-      `http://localhost:2000/api/visitors/pic/increase`,
+      `https://pictusweb.online/api/visitors/pic/increase`,
+      // `http://localhost:2000/api/visitors/pic/increase`,
       config
     )
     console.log('vstrsDec:', data.visitorsDeclined)
@@ -45,8 +45,8 @@ const Home = () => {
 
   const increaseVisitorsAgreed = async () => {
     const { data } = await axios.put(
-      // `https://pictusweb.online/api/visitors/pic/agree/increase`,
-      `http://localhost:2000/api/visitors/pic/agree/increase`,
+      `https://pictusweb.online/api/visitors/pic/agree/increase`,
+      // `http://localhost:2000/api/visitors/pic/agree/increase`,
       config
     )
     console.log('vstrsAgr:', data.visitorsAgreed)
