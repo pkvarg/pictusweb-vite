@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { animate, motion } from 'framer-motion'
 import Translation from '../components/Languages/Data.json'
 
 const Projects = ({ language }) => {
@@ -25,10 +25,10 @@ const Projects = ({ language }) => {
         {content.projectsTitle}
       </h1>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: false, amount: 0.25 }}
-        transition={{ duration: 3 }}
+        initial={{ x: 100 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 5 }}
+        viewport={{ once: true, amount: 0.25 }}
       >
         <div className='flex lg:flex-row flex-col justify-center items-center lg:gap-2 gap-8 w-[90%] mx-auto'>
           <div className='flex flex-col gap-3'>
@@ -54,6 +54,14 @@ const Projects = ({ language }) => {
               alt='prud.sk'
             />
             <h3 className='text-[35px] text-center'>prud.sk</h3>
+          </div>
+          <div className='flex flex-col gap-3'>
+            <img
+              className='w-[100rem] rounded-xl'
+              src='/bible-blog.webp'
+              alt='bible-blog.online'
+            />
+            <h3 className='text-[35px] text-center'>bible-blog.online</h3>
           </div>
         </div>
       </motion.div>
