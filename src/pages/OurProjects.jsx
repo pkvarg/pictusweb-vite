@@ -313,7 +313,7 @@ const OurProjects = () => {
           </div>
         </div>
 
-        <p className='text-[25px]'>{content.blogDesc}</p>
+        <p className='text-[25px] text-center'>{content.blogDesc}</p>
         <div className='flex flex-col lg:flex-row justify-center items-center gap-10'>
           <h1 className='text-[30px] mt-2'>{content.ourProjectsTechs}</h1>
 
