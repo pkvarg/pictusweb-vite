@@ -37,7 +37,7 @@ const Projects = ({ language }) => {
               src='/ioana-page.webp'
               alt='ioana-illustrations.eu'
             />
-            <h3 className='text-[35px] text-center'>ioana-illustrations.eu</h3>
+            <h3 className='text-[25px] text-center'>ioana-illustrations.eu</h3>
           </div>
           <div className='flex flex-col gap-3'>
             <img
@@ -45,7 +45,7 @@ const Projects = ({ language }) => {
               src='/dvl-page.webp'
               alt='kvalitnamontaz.eu'
             />
-            <h3 className='text-[35px] text-center'>kvalitnamontaz.sk</h3>
+            <h3 className='text-[25px] text-center'>kvalitnamontaz.sk</h3>
           </div>
           <div className='flex flex-col gap-3'>
             <img
@@ -53,7 +53,7 @@ const Projects = ({ language }) => {
               src='/prud-page.webp'
               alt='prud.sk'
             />
-            <h3 className='text-[35px] text-center'>prud.sk</h3>
+            <h3 className='text-[25px] text-center'>prud.sk</h3>
           </div>
           <div className='flex flex-col gap-3'>
             <img
@@ -61,7 +61,7 @@ const Projects = ({ language }) => {
               src='/bible-blog.webp'
               alt='bible-blog.online'
             />
-            <h3 className='text-[35px] text-center'>bible-blog.online</h3>
+            <h3 className='text-[25px] text-center'>bible-blog.online</h3>
           </div>
         </div>
       </motion.div>
