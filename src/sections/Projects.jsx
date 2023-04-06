@@ -30,7 +30,7 @@ const Projects = ({ language }) => {
         transition={{ duration: 5 }}
         viewport={{ once: true, amount: 0.25 }}
       >
-        <div className='flex lg:flex-row flex-col justify-center items-center lg:gap-2 gap-8 w-[90%] mx-auto'>
+        <div className='flex flex-col  lg:flex-row justify-center lg:gap-2 gap-8 w-[90%] mx-auto'>
           <div className='flex flex-col gap-3'>
             <img
               className='w-[100rem] rounded-xl'
