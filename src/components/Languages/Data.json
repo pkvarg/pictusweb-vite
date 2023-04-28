@@ -67,7 +67,7 @@
     "blogDesc": "Blog s administrátorským menu pre pridávanie a editáciu článkov.",
     "ourProjectsTechs": "Technológie:",
     "ourProjectsEshopDesc": "Moderný eshop",
-    "ourProjectsEshopProps": "Admin menu na mieru pre správu produktov, objednávok, recenzií, bannerov, mp3, videí a užívateľov s rôznymi prístupmi. Automatické generovanie faktúr odosielaných na email. Platba PayPal, kartou či na dobierku. Registrácia a prihlásenie cez email alebo Google.",
+    "ourProjectsEshopProps": "Admin menu na mieru pre správu produktov, objednávok, recenzií, bannerov, mp3, videí a užívateľov s rôznymi prístupmi. Automatické generovanie faktúr odosielaných na email. Platba cez Stripe / Google Pay alebo na dobierku. Registrácia a prihlásenie cez email alebo Google.",
     "cookies": "Táto stránka používa len analytické a pre fungovanie webu nevyhnutné cookies. Nepoužívame funkčné ani marketingové cookies."
   },
   "english": {
@@ -134,7 +134,7 @@
     "blogDesc": "Blog with admin menu for adding and editing of posts.",
     "ourProjectsTechs": "Technologies:",
     "ourProjectsEshopDesc": "Modern eshop",
-    "ourProjectsEshopProps": "Custom Admin menu for managing of product, orders, reviews, banners, mp3s, videos and users with different accesses. Automatic generating of invoices send to email. Payment via PayPal, card or cash. Registration and sign in via email or Google.",
+    "ourProjectsEshopProps": "Custom Admin menu for managing of product, orders, reviews, banners, mp3s, videos and users with different accesses. Automatic generating of invoices send to email. Payment via Stripe / Google Pay or cash. Registration and sign in via email or Google.",
     "cookies": "This page only uses analytical cookies that are necessary for the website to function. We do not use functional or marketing cookies."
   },
   "romanian": {
@@ -201,7 +201,7 @@
     "blogDesc": "Blog cu meniu de administrare pentru adăugarea și editarea articolelor.",
     "ourProjectsTechs": "Tehnologii:",
     "ourProjectsEshopDesc": "E-shop modern",
-    "ourProjectsEshopProps": "Meniu personalizat de administrare pentru gestionarea produselor, comenzilor, recenziilor, bannerelor, mp3-urilor, videoclipurilor și utilizatorilor cu accesări diferite. Generarea automată a facturilor trimise prin e-mail. Plata prin PayPal, card sau numerar. Înregistrare și conectare prin e-mail sau Google.",
+    "ourProjectsEshopProps": "Meniu personalizat de administrare pentru gestionarea produselor, comenzilor, recenziilor, bannerelor, mp3-urilor, videoclipurilor și utilizatorilor cu accesări diferite. Generarea automată a facturilor trimise prin e-mail. Plata prin Stripe / Google Pay sau numerar. Înregistrare și conectare prin e-mail sau Google.",
     "cookies": "Această pagină utilizează numai cookie-uri analitice care sunt necesare pentru ca site-ul web să funcționeze. Nu folosim cookie-uri funcționale sau de marketing."
   }
 }

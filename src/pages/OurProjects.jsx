@@ -243,7 +243,7 @@ const OurProjects = () => {
           <div className='flex flex-col justify-center items-center'>
             <h2 className='text-[30px]'>{content.ourProjectsEshopDesc}</h2>
             <h3 className='text-[25px]'>{content.ourProjectsWebDesc2}</h3>
-            <a href='https://github.com/pkvarg/prud' target='_blank'>
+            <a href='https://github.com/pkvarg/prud-vite' target='_blank'>
               <img className='mt-10' src='/git-hub-green.webp' alt='git-hub' />
             </a>
           </div>
