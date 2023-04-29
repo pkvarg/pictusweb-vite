@@ -11,6 +11,10 @@ import {
 import { ScrollToTop } from './components'
 import './App.css'
 import { StateContext } from './context/StateContext'
+import { firebaseConfig } from './firebaseConfig'
+import { initializeApp } from 'firebase/app'
+
+export const app = initializeApp(firebaseConfig)
 
 function App() {
   return (
