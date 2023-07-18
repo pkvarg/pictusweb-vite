@@ -55,6 +55,24 @@ const Projects = ({ language }) => {
             />
             <h3 className='text-[25px] text-center'>prud.sk</h3>
           </div>
+          {/* <div className='flex flex-col gap-3'>
+            <img
+              className='w-[100rem] rounded-xl'
+              src='/bible-blog.webp'
+              alt='bible-blog.online'
+            />
+            <h3 className='text-[25px] text-center'>bible-blog.online</h3>
+          </div>
+          <div className='flex flex-col gap-3'>
+            <img
+              className='w-[100rem] rounded-xl'
+              src='/cestazivota.webp'
+              alt='cestazivota.sk'
+            />
+            <h3 className='text-[25px] text-center'>cestazivota.sk</h3>
+          </div> */}
+        </div>
+        <div className='flex flex-col  lg:flex-row justify-center lg:gap-2 gap-8 w-[90%] lg:w-[60%] mx-auto mt-8'>
           <div className='flex flex-col gap-3'>
             <img
               className='w-[100rem] rounded-xl'
@@ -62,6 +80,14 @@ const Projects = ({ language }) => {
               alt='bible-blog.online'
             />
             <h3 className='text-[25px] text-center'>bible-blog.online</h3>
+          </div>
+          <div className='flex flex-col gap-3'>
+            <img
+              className='w-[100rem] rounded-xl'
+              src='/cestazivota.webp'
+              alt='cestazivota.sk'
+            />
+            <h3 className='text-[25px] text-center'>cestazivota.sk</h3>
           </div>
         </div>
       </motion.div>
