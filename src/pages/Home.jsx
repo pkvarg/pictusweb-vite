@@ -112,7 +112,6 @@ const Home = () => {
         >
           {content.cookies}
         </CookieConsent>
-
         <Footer />
       </div>
     </>

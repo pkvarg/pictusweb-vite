@@ -11,12 +11,11 @@ const Footer = () => (
         initial='hidden'
         whileInView='show'
       >
-        {/* <div className='footer-gradient' /> */}
-        <div className={`${styles.innerWidth} flex flex-col gap-8 `}>
+        <div className={`flex flex-col gap-8`}>
           <div className='mb-[10px] h-[2px] bg-white opacity-10' />
 
           <div className='flex flex-col text-[20px]'>
-            <div className='flex lg:flex-row flex-col items-center justify-between flex-wrap gap-4'>
+            <div className='flex lg:flex-row flex-col items-center justify-between flex-wrap gap-4 mx-0  lg:mx-12'>
               <div className='flex lg:flex-row flex-col gap-2 justify-center items-center'>
                 <h4 className='font-extrabold  flex-nowrap text-white'>
                   Copyright &copy; {Date().substring(11, 15)}
