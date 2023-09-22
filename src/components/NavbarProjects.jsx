@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className='justify-between px-4 mx-auto lg:max-w-[90%] md:items-center md:flex md:px-8'>
           <div>
             <div className='flex items-center justify-between py-3 md:py-5 md:block'>
-              <a className='text-[2.05rem]' href='/'>
+              <a className='text-[2rem] lg:text-[1.5rem]' href='/'>
                 &#60;&#47;&#62; PICTUSWEB development
               </a>
               <div className='md:hidden'>
@@ -75,20 +75,14 @@ const Navbar = () => {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul className='items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'>
+              <ul className='text-[2rem] lg:text-[1.5rem]items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'>
                 <li className='hidden lg:flex'>
-                  <a
-                    href='/'
-                    className='text-[2rem] lg:text-[2.05rem] hover:text-dark-red'
-                  >
+                  <a href='/' className='hover:text-dark-red'>
                     {content.navbarHome}
                   </a>
                 </li>
                 <li className=''>
-                  <a
-                    href='/about'
-                    className='text-[2rem] lg:text-[2.05rem] hover:text-dark-red'
-                  >
+                  <a href='/about' className='hover:text-dark-red'>
                     {content.navbarAbout}
                   </a>
                 </li>
@@ -100,7 +94,7 @@ const Navbar = () => {
                     smooth={true}
                     offset={0}
                     duration={500}
-                    className='text-[2rem] lg:text-[2.05rem] hover:text-dark-red'
+                    className='hover:text-dark-red'
                   >
                     {content.navbarContact}
                   </Link>

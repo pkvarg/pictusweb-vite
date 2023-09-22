@@ -28,7 +28,7 @@ const Hero = ({ language }) => {
           className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8 lg:py-[100px] py-[50px]`}
         >
           <div className='flex flex-col justify-left'>
-            <h1 className='text-white text-[7rem]'>
+            <h1 className='text-white text-[5rem]'>
               <TypingText
                 title={
                   language === 'romanian'
@@ -39,7 +39,7 @@ const Hero = ({ language }) => {
                 }
               />
             </h1>
-            <h1 className='text-white text-[70px] mb-[2rem]'>
+            <h1 className='text-white text-[50px] mb-[2rem]'>
               <TypingText
                 title={
                   language === 'romanian'
@@ -51,7 +51,7 @@ const Hero = ({ language }) => {
               />
             </h1>
 
-            <div className='text-white text-[50px]'>
+            <div className='text-white text-[40px]'>
               <TitleText
                 title={
                   language === 'romanian'
@@ -66,7 +66,7 @@ const Hero = ({ language }) => {
         </motion.div>
         <div className='lg:w-[100%]'>
           <img
-            className='w-[100%] ml-auto lg:mt-0 mt-[12rem]'
+            className='w-[100%] ml-auto lg:mt-0 mt-[6rem]'
             src='/hero-builders.webp'
             alt='hero'
           />

@@ -16,7 +16,7 @@ const LanguageBar = () => {
         className=''
       >
         <img
-          className='w-[3rem] md:w-[14rem] lg:w-[3rem]'
+          className='w-[3rem] md:w-[14rem] lg:w-[2rem]'
           src='/english.webp'
           alt='english'
         />
@@ -27,7 +27,7 @@ const LanguageBar = () => {
         // className='mr-3 absolute text-white top-[0rem] left-[6rem] lg:top-[-65px] lg:left-[50%] text-[30px]'
       >
         <img
-          className='w-[3rem] md:w-[14rem] lg:w-[3rem]'
+          className='w-[3rem] md:w-[14rem] lg:w-[2rem]'
           src='/slovak.webp'
           alt='slovak'
         />
@@ -37,7 +37,7 @@ const LanguageBar = () => {
         // className='mr-3 absolute text-white top-[0rem] left-[11rem] lg:top-[-65px] lg:left-[55%] text-[30px]'
       >
         <img
-          className='w-[3rem] md:w-[14rem] lg:w-[3rem]'
+          className='w-[3rem] md:w-[14rem] lg:w-[2rem]'
           src='/romanian.webp'
           alt='romanian'
         />

@@ -21,7 +21,7 @@ const Projects = ({ language }) => {
   }
   return (
     <div className='text-white pt-10' id='projects'>
-      <h1 className='text-center text-[56px] mb-[120px]'>
+      <h1 className='text-center text-[50px] lg:text-[40px] mb-[120px]'>
         {content.projectsTitle}
       </h1>
       <motion.div
@@ -93,7 +93,7 @@ const Projects = ({ language }) => {
       </motion.div>
       <div className='flex justify-center'>
         <button
-          className='text-[35px] mt-20 px-6 pt-4 pb-1.5 bg-violet rounded-[25px] border border-white  hover:bg-blue-700 hover:bg-white hover:text-[#3B0A60] '
+          className='text-[25px] lg:text-[25px] mt-20 px-4 pt-4 pb-1.5 bg-violet rounded-[25px] border border-white  hover:bg-blue-700 hover:bg-white hover:text-[#3B0A60] '
           onClick={() => toProjectsHandler()}
         >
           {content.projectsDetails}
