@@ -34,7 +34,7 @@ const OurProjects = () => {
     <>
       <div className='px-4 lg:px-0 hero-gradient text-white flex flex-col justify-center items-center gap-40'>
         <NavbarProjects language={language} />
-        <h1 className='text-[56px]'>{content.ourProjectsTitle}</h1>
+        <h1 className='text-[45px] text-center'>{content.ourProjectsTitle}</h1>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -43,12 +43,12 @@ const OurProjects = () => {
           className='flex justify-center'
         >
           <img
-            className='hidden md:flex lg:w-[75%]  h-auto'
+            className='md:flex lg:w-[75%] h-auto'
             src='/js-web.webp'
             alt='js-web-development'
           />
         </motion.div>
-        <h1 className='text-[32.5px] text-center'>{content.ourProjectsSub}</h1>
+        <h1 className='text-[30px] text-center'>{content.ourProjectsSub}</h1>
         <div className='flex lg:flex-row flex-col items-center justify-center gap-40 '>
           <div className='flex flex-col justify-center items-center'>
             <h2 className='text-[30px]'>{content.ourProjectsWebDesc1}</h2>
@@ -486,9 +486,9 @@ const OurProjects = () => {
         <div className='-mt-60 lg:-mt-40 w-[24rem] md:w-[48rem] lg:w-[90rem]'>
           <Contact language={language} />
         </div>
-        <div className='-mt-40'>
-          <Footer />
-        </div>
+      </div>
+      <div className='bg-[#8f5ab7]'>
+        <Footer />
       </div>
     </>
   )

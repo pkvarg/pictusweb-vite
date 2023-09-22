@@ -21,7 +21,7 @@ const Offer = ({ language }) => {
   }
   return (
     <div className='text-white lg:mt-40' id='offer'>
-      <h1 className='text-[56px] text-center mb-16 mt-[120px] lg:mt-0 '>
+      <h1 className='text-[50px] lg:text-[40px] text-center mb-16 mt-[120px] lg:mt-0 '>
         {content.offerTitle}
       </h1>
       <div className='flex lg:flex-row flex-col justify-center items-center gap-4 sm:h-[50rem] md:h-[90rem] lg:h-[39.5rem]'>
@@ -31,19 +31,11 @@ const Offer = ({ language }) => {
           <h1 className='text-[70px] text-center my-10'>
             <span className='text-[35px]'>{content.offer1priceFrom}</span>{' '}
             {content.offer1price}
-            <div className='flex flex-col'>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer1desc1}</p>
-              </div>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer1desc2} </p>
-              </div>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer1desc3}</p>
-              </div>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer1desc4}</p>
-              </div>
+            <div className='flex flex-col gap-3 text-[30px] mx-4'>
+              <p className='mt-[1.25%]'>{content.offer1desc1}</p>
+              <p className='mt-[1.25%]'>{content.offer1desc2} </p>
+              <p className='mt-[1.25%]'>{content.offer1desc3}</p>
+              <p className='mt-[1.25%]'>{content.offer1desc4}</p>
             </div>
           </h1>
         </div>
@@ -53,47 +45,31 @@ const Offer = ({ language }) => {
           <h1 className='text-[70px] text-center my-10'>
             <span className='text-[35px]'>{content.offer1priceFrom}</span>{' '}
             {content.offer2price}
-            <div className='flex flex-col'>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer2desc1}</p>
-              </div>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer2desc2}</p>
-              </div>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer2desc3}</p>
-              </div>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer2desc4}</p>
-              </div>
+            <div className='flex flex-col text-[30px] gap-3 mx-4'>
+              <p className='mt-[1.25%]'>{content.offer2desc1}</p>
+              <p className='mt-[1.25%]'>{content.offer2desc2}</p>
+              <p className='mt-[1.25%]'>{content.offer2desc3}</p>
+              <p className='mt-[1.25%]'>{content.offer2desc4}</p>
             </div>
           </h1>
         </div>
         <div className='lg:border border-white lg:w-[25%] lg:h-[100%] hover:scale-[1.05]'>
           <h1 className='text-center text-[35px] mt-10'>{content.offer3sub}</h1>
           <div className='w-[20rem] h-2 bg-[#f9394f] ml-auto mr-auto'></div>
-          <h1 className='text-[70px] text-center my-10'>
+          <h1 className='text-[70px] text-center my-10 '>
             <span className='text-[50px]'>{content.offer3price}</span>
-            <div className='flex flex-col'>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer3desc1}</p>
-              </div>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer3desc2} </p>
-              </div>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer3desc3}</p>
-              </div>
-              <div className='flex flex-row  gap-2 justify-center'>
-                <p className='text-[35px] mt-[1.25%]'>{content.offer3desc4}</p>
-              </div>
+            <div className='flex flex-col text-[30px] gap-3 mx-4'>
+              <p className='mt-[1.25%]'>{content.offer3desc1}</p>
+              <p className='mt-[1.25%]'>{content.offer3desc2} </p>
+              <p className='mt-[1.25%]'>{content.offer3desc3}</p>
+              <p className='mt-[1.25%]'>{content.offer3desc4}</p>
             </div>
           </h1>
         </div>
       </div>
       <div className='flex justify-center'>
         <button
-          className='text-[35px] mt-20 px-6 pt-4 pb-1.5 bg-violet rounded-[25px] border border-white  hover:bg-blue-700 hover:bg-white hover:text-[#3B0A60] ml-auto mr-auto'
+          className='text-[25px] mt-20 px-4 pt-4 pb-1.5 bg-violet rounded-[25px] border border-white  hover:bg-blue-700 hover:bg-white hover:text-[#3B0A60] ml-auto mr-auto'
           onClick={() => toProjectsHandler()}
         >
           {content.offerDetails}

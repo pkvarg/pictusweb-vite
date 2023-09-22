@@ -9,18 +9,14 @@ const Gdpr = () => {
   }
   return (
     <>
-      <div className='second-gradient text-white text-[32px]'>
-        <div className='lg:mx-20 mx-2 lg:py-20 py-6 lg:text-justify flex flex-col gap-4 '>
-          <div className='flex flex-row justify-between relative'>
-            <h2>ZÁSADY SPRACOVÁVANIA OSOBNÝCH ÚDAJOV</h2>
-            <button
-              className='
-              lg:text-[35px] text-[25px] bg-violet  pt-3 px-2 rounded-xl border border-white hover:text-violet hover:bg-white absolute lg:-top-6 -top-4 right-0'
-              onClick={() => backButton()}
-            >
-              <span>Naspäť</span>
-            </button>
-          </div>
+      <div className='hero-gradient text-white text-[25px]'>
+        <p className='text-center pt-4'>
+          <a className='text-[2rem] lg:text-[1.5rem]' href='/'>
+            &#60;&#47;&#62; PICTUSWEB development
+          </a>
+        </p>
+        <div className='mx-4 lg:mx-12 lg:py-20 py-6 text-center lg:text-justify flex flex-col gap-4 mt-20'>
+          <h2 className='text-center'>ZÁSADY SPRACOVÁVANIA OSOBNÝCH ÚDAJOV</h2>
           <p>
             Ochranu osobných údajov berieme vážne. Je pre nás dôležité, aby vaše
             osobné údaje boli v bezpečí. Všetky osobné údaje, ktoré sú získavané

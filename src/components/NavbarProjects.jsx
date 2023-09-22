@@ -75,7 +75,7 @@ const Navbar = () => {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul className='text-[2rem] lg:text-[1.5rem]items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'>
+              <ul className='text-[2rem] lg:text-[1.5rem] items-center justify-center gap-2 md:flex md:space-x-6 md:space-y-0'>
                 <li className='hidden lg:flex'>
                   <a href='/' className='hover:text-dark-red'>
                     {content.navbarHome}
@@ -99,7 +99,7 @@ const Navbar = () => {
                     {content.navbarContact}
                   </Link>
                 </li>
-                <li className='-translate-y-[27.5%]'>
+                <li className='lg:-translate-y-[5px]'>
                   <LanguageBar />
                 </li>
               </ul>

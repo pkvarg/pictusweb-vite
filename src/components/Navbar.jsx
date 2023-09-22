@@ -115,7 +115,7 @@ const Navbar = () => {
                   <a href='/counter'>Counter</a>
                 </li> */}
 
-                <li>
+                <li className='lg:translate-y-[2px]'>
                   <LanguageBar />
                 </li>
               </ul>

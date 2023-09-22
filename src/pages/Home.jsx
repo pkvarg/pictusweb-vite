@@ -74,15 +74,16 @@ const Home = () => {
           language={language}
           location='bottom'
           style={{
-            background: '#e7e7e8',
-            color: '#000',
-            fontSize: '22.5px',
-            textAlign: 'justify',
+            background: '#834daf',
+            color: '#ffffff',
+            fontSize: '19px',
+            textAlign: 'start',
           }}
           buttonStyle={{
             background: '#1d9f2f',
             color: '#fff',
-            fontSize: '22.5px',
+            fontSize: '18px',
+            paddingTop: '12.5px',
           }}
           buttonText='OK'
           expires={365}
@@ -94,7 +95,8 @@ const Home = () => {
           declineButtonStyle={{
             background: 'red',
             color: '#fff',
-            fontSize: '22.5px',
+            fontSize: '18px',
+            paddingTop: '12.5px',
           }}
           declineButtonText={
             language === 'romanian'

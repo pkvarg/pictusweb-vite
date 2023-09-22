@@ -9,19 +9,17 @@ const TradeRrules = () => {
   }
   return (
     <>
-      <div className='second-gradient text-white text-[32px]'>
-        <div className='lg:mx-20 mx-2 lg:py-20 py-6 lg:text-justify flex flex-col gap-4'>
-          <div className='flex flex-row justify-between relative'>
-            <h2>Všeobecné obchodné podmienky</h2>
-            <button
-              className='
-              lg:text-[35px] text-[25px] bg-violet pt-3 px-2 rounded-xl border border-white hover:text-violet hover:bg-white absolute top-12 lg:-top-6  right-0'
-              onClick={() => backButton()}
-            >
-              <span>Naspäť</span>
-            </button>
-          </div>
-          <h3>1. VŠEOBECNÉ USTANOVENIA</h3>
+      <div className='hero-gradient text-white text-[25px]'>
+        <p className='text-center pt-4'>
+          <a className='text-[2rem] lg:text-[1.5rem]' href='/'>
+            &#60;&#47;&#62; PICTUSWEB development
+          </a>
+        </p>
+        <div className='mx-4 lg:mx-10 py-20 text-center lg:text-justify flex flex-col gap-4'>
+          <h2 className='text-center text-[35px]'>
+            VŠEOBECNÉ OBCHODNÉ PODMIENKY
+          </h2>
+          <h3 className='mt-16'>1. VŠEOBECNÉ USTANOVENIA</h3>
           Tieto všeobecné obchodné podmienky (ďalej len „VOP“) upravujú práva a
           povinnosti zmluvných strán vyplývajúce z kúpnej zmluvy uzatvorenej
           medzi Kupujúcim - Spotrebiteľom a Predávajúcim. Predmetom kúpnej

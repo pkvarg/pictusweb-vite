@@ -10,15 +10,14 @@ const About = () => {
   return (
     <>
       <div className='hero-gradient text-white relative'>
-        <button
-          className='
-              lg:text-[35px] text-[25px] bg-violet  pt-3 px-2 rounded-xl border border-white hover:text-violet hover:bg-white absolute lg:top-8 top-2 lg:left-8 left-2'
-          onClick={() => backButton()}
-        >
-          <span>Naspäť</span>
-        </button>
-        <div className='flex flex-col  justify-center items-center gap-4 text-[35px] pb-40'>
-          <h1 className='lg:text-[56px] text-[45px] pt-20 pb-10'>O nás</h1>
+        <p className='text-center pt-4'>
+          <a className='text-[2rem] lg:text-[1.5rem]' href='/'>
+            &#60;&#47;&#62; PICTUSWEB development
+          </a>
+        </p>
+        <div className='flex flex-col  justify-center items-center gap-4 text-[25px] pb-10 lg:pb-40 mx-4'>
+          <h1 className='lg:text-[35x] text-[40px] py-20'>O nás</h1>
+
           <p>Pictusweb.s.r.o.</p>
           <p>Nábrežná 42</p>
           <p>Nové Zámky</p>

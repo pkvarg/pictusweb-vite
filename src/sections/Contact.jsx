@@ -100,10 +100,10 @@ const ContactForm = ({ language }) => {
   }
 
   return (
-    <div className='pt-40 pb-10 '>
+    <div className='pt-16 lg:pt-40 pb-10 '>
       <h1
         id='contact'
-        className='text-[35px] lg:text-[60px] text-white text-center lg:pt-0 pt-[55px]'
+        className='text-[35px] lg:text-[35px] text-white text-center lg:pt-0 pt-[55px]'
       >
         {content.contactTitle}
       </h1>
@@ -117,7 +117,7 @@ const ContactForm = ({ language }) => {
             <form
               ref={form}
               onSubmit={sendEmail}
-              className='flex flex-col gap-[2.5px] text-[35px]'
+              className='flex flex-col gap-[2.5px] text-[25px]'
             >
               <div className='flex lg:flex-row flex-col gap-[25px]'>
                 <div className='flex flex-col justify-center '>
@@ -192,11 +192,11 @@ const ContactForm = ({ language }) => {
                     value={checkBox}
                     onChange={handleCheckBox}
                     required='required'
-                    className='rounded-xl'
+                    className='rounded-xl w-[25px] h-[25px] lg:h-[30px]'
                   />
 
                   <label
-                    className='form-check-label lg:text-[30px] text-[35px] ml-[15px]'
+                    className='form-check-label lg:text-[30px] text-[25px] ml-[15px]'
                     htmlFor='flexCheckDefault'
                   >
                     {content.contactAgree}
@@ -216,7 +216,7 @@ const ContactForm = ({ language }) => {
                 onChange={(e) => setPasswordGroupTwo(e.target.value)}
               />
               <button
-                className='text-[35px] bg-violet lg:mt-20 mt-10 pt-3 rounded-xl border border-white hover:text-violet hover:bg-white'
+                className='text-[25px] bg-violet lg:mt-20 mt-10 pt-3 rounded-xl border border-white hover:text-violet hover:bg-white'
                 type='submit'
                 value='Send'
               >
