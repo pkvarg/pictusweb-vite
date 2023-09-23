@@ -3,6 +3,7 @@ import { AudioInput, AudioOutput } from '../components'
 
 const AudioStream = () => {
   const [audioStream, setAudioStream] = useState(null)
+  console.log(audioStream)
 
   return (
     <div className='hero-gradient text-[#ffffff] h-[100vh] text-[25px]'>

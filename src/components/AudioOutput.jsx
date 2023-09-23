@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
 
 function AudioOutput({ audioStream }) {
-  const [audioContext] = useState(new AudioContext())
+  const [audioContext, setAudioContext] = useState(null)
   const [sourceNode, setSourceNode] = useState(null)
 
   const startAudioOutput = () => {
-    const source = audioContext.createMediaStreamSource(audioStream)
-    setSourceNode(source)
+    if (!audioContext) {
+      const context = new AudioContext()
+      setAudioContext(context)
 
-    source.connect(audioContext.destination)
+      const source = context.createMediaStreamSource(audioStream)
+      setSourceNode(source)
+
+      source.connect(context.destination)
+    }
   }
 
   return (

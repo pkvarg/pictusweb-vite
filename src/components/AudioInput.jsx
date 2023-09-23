@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 
-function AudioInput() {
-  const [stream, setStream] = useState(null)
-
+function AudioInput({ setAudioStream }) {
   const startAudioInput = async () => {
-    const audioStream = await navigator.mediaDevices.getUserMedia({
+    const audioStreaming = await navigator.mediaDevices.getUserMedia({
       audio: true,
     })
-    setStream(audioStream)
+    setAudioStream(audioStreaming)
   }
 
   return (
