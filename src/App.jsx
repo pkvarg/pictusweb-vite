@@ -7,6 +7,7 @@ import {
   TradeRules,
   Counter,
   ErrorPage,
+  AudioStream,
 } from './pages'
 import { ScrollToTop } from './components'
 import './App.css'
@@ -28,6 +29,7 @@ function App() {
           <Route path='/gdpr' element={<Gdpr />} />
           <Route path='/trade-rules' element={<TradeRules />} />
           <Route path='/counter' element={<Counter />} />
+          <Route path='/audio' element={<AudioStream />} />
           <Route path='*' element={<ErrorPage />} />
         </Routes>
         <ScrollToTop />
