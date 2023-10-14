@@ -254,7 +254,7 @@ const OurProjects = () => {
             transition={{ duration: 3 }}
             className='flex justify-center'
           >
-            <a href='https://pictusweb.art' target='_blank'>
+            <a href='https://prud.pictusweb.com' target='_blank'>
               <img className='w-[40rem]' src='/prud-page.webp' alt='prud.sk' />
             </a>
           </motion.div>
