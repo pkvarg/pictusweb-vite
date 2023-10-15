@@ -45,7 +45,7 @@ const ContactForm = ({ language }) => {
 
   const increaseBots = async () => {
     const { data } = await axios.put(
-      `https://pictusweb.online/api/bots/increase`,
+      `https://api.pictusweb.com/api/bots/increase`,
       // `http://localhost:2000/api/bots/increase`,
 
       config
