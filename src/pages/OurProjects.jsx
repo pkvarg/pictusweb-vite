@@ -317,7 +317,11 @@ const OurProjects = () => {
         <div className='flex flex-col lg:flex-row justify-center items-center gap-10'>
           <h1 className='text-[30px] mt-2'>{content.ourProjectsTechs}</h1>
 
-          <img src='nextjs.png' alt='next.js' className='w-[45px]' />
+          <img
+            src='nextjs.webp'
+            alt='next.js'
+            className='w-[45px] rounded-[60%]'
+          />
           <p className='text-[30px] mt-2'> Next.js 13 </p>
           <svg
             xmlns='http://www.w3.org/2000/svg'
