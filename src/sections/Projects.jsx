@@ -77,7 +77,7 @@ const Projects = ({ language }) => {
             <img
               className='w-[100rem] rounded-xl'
               src='/bible-blog.webp'
-              alt='bible-blog.online'
+              alt='next.bible-blog.online'
             />
             <h3 className='text-[25px] text-center'>bible-blog.online</h3>
           </div>
