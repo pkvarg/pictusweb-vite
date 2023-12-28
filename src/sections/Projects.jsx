@@ -31,7 +31,10 @@ const Projects = ({ language }) => {
         viewport={{ once: true, amount: 0.25 }}
       >
         <div className='flex flex-col  lg:flex-row justify-center lg:gap-2 gap-8 w-[90%] mx-auto'>
-          <div className='flex flex-col gap-3'>
+          <div
+            onClick={() => navigate('/projects#ioana-illustrations')}
+            className='flex flex-col gap-3 cursor-pointer'
+          >
             <img
               className='w-[100rem] rounded-xl'
               src='/ioana-page.webp'
@@ -39,7 +42,10 @@ const Projects = ({ language }) => {
             />
             <h3 className='text-[25px] text-center'>ioana-illustrations.eu</h3>
           </div>
-          <div className='flex flex-col gap-3'>
+          <div
+            onClick={() => navigate('/projects#kvalitna-montaz')}
+            className='flex flex-col gap-3 cursor-pointer'
+          >
             <img
               className='w-[100rem] rounded-xl'
               src='/dvl-page.webp'
@@ -47,7 +53,10 @@ const Projects = ({ language }) => {
             />
             <h3 className='text-[25px] text-center'>kvalitnamontaz.sk</h3>
           </div>
-          <div className='flex flex-col gap-3'>
+          <div
+            onClick={() => navigate('/projects#prud.sk')}
+            className='flex flex-col gap-3 cursor-pointer'
+          >
             <img
               className='w-[100rem] rounded-xl'
               src='/prud-page.webp'
@@ -55,25 +64,12 @@ const Projects = ({ language }) => {
             />
             <h3 className='text-[25px] text-center'>prud.sk</h3>
           </div>
-          {/* <div className='flex flex-col gap-3'>
-            <img
-              className='w-[100rem] rounded-xl'
-              src='/bible-blog.webp'
-              alt='bible-blog.online'
-            />
-            <h3 className='text-[25px] text-center'>bible-blog.online</h3>
-          </div>
-          <div className='flex flex-col gap-3'>
-            <img
-              className='w-[100rem] rounded-xl'
-              src='/cestazivota.webp'
-              alt='cestazivota.sk'
-            />
-            <h3 className='text-[25px] text-center'>cestazivota.sk</h3>
-          </div> */}
         </div>
-        <div className='flex flex-col  lg:flex-row justify-center lg:gap-2 gap-8 w-[90%] lg:w-[60%] mx-auto mt-8'>
-          <div className='flex flex-col gap-3'>
+        <div className='flex flex-col  lg:flex-row justify-center lg:gap-2 gap-8 w-[90%] lg:w-[90%] mx-auto mt-8'>
+          <div
+            onClick={() => navigate('/projects#bible-blog')}
+            className='flex flex-col gap-3 cursor-pointer'
+          >
             <img
               className='w-[100rem] rounded-xl'
               src='/bible-blog.webp'
@@ -81,7 +77,47 @@ const Projects = ({ language }) => {
             />
             <h3 className='text-[25px] text-center'>bible-blog.online</h3>
           </div>
-          <div className='flex flex-col gap-3'>
+          <div
+            onClick={() => navigate('/projects#cesta-zivota')}
+            className='flex flex-col gap-3 cursor-pointer'
+          >
+            <img
+              className='w-[100rem] rounded-xl'
+              src='/cestazivota.webp'
+              alt='cestazivota.sk'
+            />
+            <h3 className='text-[25px] text-center'>
+              cirkev BA ...cestazivota.sk
+            </h3>
+          </div>
+          <div
+            onClick={() => navigate('/projects#michal-dovala')}
+            className='flex flex-col gap-3 cursor-pointer'
+          >
+            <img
+              className='w-[100rem] rounded-xl'
+              src='/md.webp'
+              alt='michaldovala.sk'
+            />
+            <h3 className='text-[25px] text-center'>michaldovala.sk</h3>
+          </div>
+        </div>
+        {/* <div className='flex flex-col  lg:flex-row justify-center lg:gap-2 gap-8 w-[90%] lg:w-[90%] mx-auto mt-8'>
+          <div
+            onClick={() => navigate('/projects#bible-blog')}
+            className='flex flex-col gap-3 cursor-pointer'
+          >
+            <img
+              className='w-[100rem] rounded-xl'
+              src='/bible-blog.webp'
+              alt='next.bible-blog.online'
+            />
+            <h3 className='text-[25px] text-center'>cirkevba.sk</h3>
+          </div>
+          <div
+            onClick={() => navigate('/projects#cesta-zivota')}
+            className='flex flex-col gap-3 cursor-pointer'
+          >
             <img
               className='w-[100rem] rounded-xl'
               src='/cestazivota.webp'
@@ -89,16 +125,27 @@ const Projects = ({ language }) => {
             />
             <h3 className='text-[25px] text-center'>cestazivota.sk</h3>
           </div>
-        </div>
+          <div
+            onClick={() => navigate('/projects#michal-dovala')}
+            className='flex flex-col gap-3 cursor-pointer'
+          >
+            <img
+              className='w-[100rem] rounded-xl'
+              src='/md.webp'
+              alt='michaldovala.sk'
+            />
+            <h3 className='text-[25px] text-center'>michaldovala.sk</h3>
+          </div>
+        </div> */}
       </motion.div>
-      <div className='flex justify-center'>
+      {/* <div className='flex justify-center'>
         <button
           className='text-[25px] lg:text-[25px] mt-20 px-4 pt-4 pb-1.5 bg-violet rounded-[25px] border border-white  hover:bg-blue-700 hover:bg-white hover:text-[#3B0A60] '
           onClick={() => toProjectsHandler()}
         >
           {content.projectsDetails}
         </button>
-      </div>
+      </div> */}
     </div>
   )
 }
