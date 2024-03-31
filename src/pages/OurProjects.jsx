@@ -271,7 +271,7 @@ const OurProjects = () => {
             transition={{ duration: 3 }}
             className='flex justify-center'
           >
-            <a id='prud.sk' href='https://prud.pictusweb.com' target='_blank'>
+            <a id='prud.sk' href='https://prud.pictusweb.site' target='_blank'>
               <img className='w-[40rem]' src='/prud-page.webp' alt='prud.sk' />
             </a>
           </motion.div>
@@ -313,7 +313,7 @@ const OurProjects = () => {
             transition={{ duration: 3 }}
             className='flex justify-center'
           >
-            <a href='https://next.bible-blog.online' target='_blank'>
+            <a href='https://blog.pictusweb.site' target='_blank'>
               <img
                 className='w-[40rem]'
                 src='/bible-blog.webp'
