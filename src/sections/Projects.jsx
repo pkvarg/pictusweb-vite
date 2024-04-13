@@ -86,9 +86,7 @@ const Projects = ({ language }) => {
               src='/cestazivota.webp'
               alt='cestazivota.sk'
             />
-            <h3 className='text-[25px] text-center'>
-              cirkev BA ...cestazivota.sk
-            </h3>
+            <h3 className='text-[25px] text-center'>cestazivota.sk</h3>
           </div>
           <div
             onClick={() => navigate('/projects#michal-dovala')}
